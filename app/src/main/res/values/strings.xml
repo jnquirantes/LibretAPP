@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Programacion_Multimedia</string>
+    <string name="title_activity_tema3">Tema3</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_t6_caso1">T6_Caso1</string>
+    <string name="navigation_drawer_open">Abrir navigation drawer</string>
+    <string name="navigation_drawer_close">Cerrar navigation drawer</string>
+    <string name="action_settings">Configuración</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Mensajes</string>
+    <string name="sync_header">Sincronización</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Tu firma</string>
+    <string name="reply_title">Acción de respuesta predeterminada</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sincroniza email periódicamente</string>
+    <string name="attachment_title">Descargar archivos adjuntos</string>
+    <string name="attachment_summary_on">Descargar automáticamente archivos adjuntos</string>
+    <string name="attachment_summary_off">Solo descargar archivos adjuntos manualmente</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_t7_actividad1">T7_Actividad1</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_t7_activiidad1">T7_Activiidad1</string>
+    <string name="title_activity_t7_actividad2">T7_Actividad2</string>
+    <string name="title_base_numero">Base del número</string>
+    <string name="decimal">Decimal</string>
+    <string name="n_mero">Número</string>
+    <string name="octal">Octal</string>
+    <string name="binario">Binario</string>
+    <string name="hexadecimal">Hexadecimal</string>
+    <string name="convertir">Convertir</string>
+    <string name="resultado_de_la_conversi_n">Resultado de la conversión</string>
+    <string name="escriba_aqui">Escriba aqui</string>
+    <string name="fab">fab</string>
+    <string name="title_caso">Caso práctico</string>
+    <string name="actividad_1">Actividad 1</string>
+    <string name="actividad_2">Actividad 2</string>
+    <string name="button">button</string>
+</resources>

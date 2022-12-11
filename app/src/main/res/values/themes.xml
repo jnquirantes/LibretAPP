@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema base de la aplicación -->
+    <style name="Theme.Programacion_Multimedia"
+           parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Colores primarios -->
+        <item name="colorPrimary">@color/holo_orange_light</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">#EBD79D</item>
+
+        <!-- Colores secundarios -->
+        <item name="colorSecondary">#8F672E</item>
+        <item name="colorSecondaryVariant">@color/brown</item>
+        <item name="colorOnSecondary">#302616</item>
+
+        <!-- Color statusBar -->
+        <item name="android:statusBarColor">@color/grey</item>
+
+        <!-- Personalizaciones con estilos anidados-->
+        <item name="aboutStyle">@style/Widget.App.AboutPage</item>
+    </style>
+
+    <style name="Theme.Programacion_Multimedia.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Programacion_Multimedia.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Programacion_Multimedia.PopupOverlay"
+           parent="ThemeOverlay.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Estilo para la página de About anidando elementos... -->
+    <style name="Widget.App.AboutPage" parent="about_About">
+        <item name="aboutBackground">#ffffff</item>
+        <item name="aboutElementIconTint">#333333</item>
+        <item name="aboutSeparatorColor">#999999</item>
+        <item name="aboutDescriptionTextAppearance">
+            @style/TextAppearance.App.AboutPage.Description
+        </item>
+            <!-- Personalizar texto -->
+        <item name="aboutElementTextAppearance">@style/about_elementTextAppearance.Dark</item>
+        <item name="aboutGroupTextAppearance">@style/about_groupTextAppearance</item>
+    </style>
+
+    <style name="TextAppearance.App.AboutPage.Description"
+           parent="about_descriptionTextAppearance.Dark">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+</resources>

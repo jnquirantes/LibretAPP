@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.app.programacion_multimedia.tema7.ui.home.HomeLibros"
+        android:label="Libreria"
+        tools:layout="@layout/t7_actividad2_home" />
+    <fragment
+        android:id="@+id/nav_addLibro"
+        android:name="com.app.programacion_multimedia.tema7.ui.add.AddLibros"
+        android:label="Añadir libro"
+        tools:layout="@layout/t7_actividad2_add" />
+
+    <fragment
+        android:id="@+id/nav_eliminarLibro"
+        android:name="com.app.programacion_multimedia.tema7.ui.eliminar.EliminarLibro"
+        android:label="Eliminar libro"
+        tools:layout="@layout/t7_actividad2_eliminar" />
+
+    <fragment
+        android:id="@+id/nav_modificarLibro"
+        android:name="com.app.programacion_multimedia.tema7.ui.modificar.ModificarLibro"
+        android:label="Modificar libro"
+        tools:layout="@layout/t7_actividad2_modificar" />
+</navigation>

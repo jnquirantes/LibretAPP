@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tema7.Frag_t7_casos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="55dp">
+
+        <Space
+            android:id="@+id/space3"
+            android:layout_width="411dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/architects_daughter"
+            android:text="Música"
+            android:textAlignment="center"
+            android:textSize="36dp" />
+
+        <Spinner
+            android:id="@+id/spinnerMusica"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:contentDescription="Spinner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@android:style/Widget.Material.SeekBar.Discrete"
+                android:layout_width="335dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:background="#F1D1A1"
+                android:thumb="@android:drawable/status_bar_item_background" />
+
+            <TextView
+                android:id="@+id/seekBarHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:text="00:00"
+                android:textSize="16sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:divider="?android:attr/fastScrollThumbDrawable"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/bParar"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:contentDescription="Stop"
+                android:gravity="center_horizontal"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_white_stop"
+                app:iconGravity="top"
+                app:iconSize="40dp"
+                app:iconTint="#FFFFFF"
+                app:strokeColor="#000000"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/bComenzar"
+                android:layout_width="125dp"
+                android:layout_height="54dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:contentDescription="Play"
+                android:gravity="center_horizontal"
+                app:cornerRadius="20dp"
+                app:icon="@android:drawable/ic_media_play"
+                app:iconGravity="top"
+                app:iconSize="40dp"
+                app:iconTint="#FFFFFF"
+                app:strokeColor="#000000"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/bPausar"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:contentDescription="Pause"
+                android:gravity="center_horizontal"
+                app:cornerRadius="20dp"
+                app:icon="@android:drawable/ic_media_pause"
+                app:iconGravity="top"
+                app:iconSize="40dp"
+                app:iconTint="#FFFFFF"
+                app:strokeColor="#000000"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/architects_daughter"
+            android:text="Sonidos"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="319dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="4"
+            android:clipToPadding="true"
+            android:paddingHorizontal="25dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="#FAE1C5">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:text="Instrumentos"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bTrompeta"
+                    android:layout_width="111dp"
+                    android:layout_height="88dp"
+                    android:src="@drawable/ic_trompeta" />
+
+                <ImageView
+                    android:id="@+id/bTambor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="60dp"
+                    android:src="@drawable/ic_tambor" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FAE1C5">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Animales"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bCabra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="87dp"
+                    android:src="@drawable/ic_cabra" />
+
+                <ImageView
+                    android:id="@+id/bPajaro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="60dp"
+                    android:src="@drawable/ic_pajaro" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FAE1C5">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Juegos"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bSeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_seta_vida" />
+
+                <ImageView
+                    android:id="@+id/bCoin"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="60dp"
+                    android:src="@drawable/ic_coin_mario" />
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

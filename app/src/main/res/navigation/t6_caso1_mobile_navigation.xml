@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_tema4">
+
+    <fragment
+        android:id="@+id/nav_tema4"
+        android:name="com.app.programacion_multimedia.tema6.Frag_t6_casos"
+        android:label="Tema 4"
+        tools:layout="@layout/t7_actividad1_buscar" />
+
+    <activity android:id="@+id/nav_tema5"
+        android:name="com.app.programacion_multimedia.tema5.Tema5"
+        android:label="Tema 5"
+        tools:layout="@layout/activity_temas"/>
+
+    <activity android:id="@+id/nav_tema6"
+        android:name="com.app.programacion_multimedia.tema6.Tema6"
+        android:label="Tema 6"
+        tools:layout="@layout/activity_temas"/>
+
+
+    <activity android:id="@+id/nav_tema7"
+        android:name="com.app.programacion_multimedia.tema7.Tema7"
+        android:label="Tema 7"
+        tools:layout="@layout/activity_temas"/>
+</navigation>
