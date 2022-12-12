@@ -3,8 +3,6 @@ package com.app.programacion_multimedia.tema4;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -38,44 +36,41 @@ public class T4_Actividad1 extends AppCompatActivity {
         tOctal = findViewById(R.id.tOctal);
         tHexa = findViewById(R.id.tHexa);
 
-        findViewById(R.id.bConvertir).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                base = etBase.getText().toString().trim();
+        findViewById(R.id.bConvertir).setOnClickListener(v -> {
+            base = etBase.getText().toString().trim();
 
-                if(base.equals("")) {
-                    Toast.makeText(T4_Actividad1.this, "Introduce un numero", Toast.LENGTH_SHORT).show();
+            if(base.equals("")) {
+                Toast.makeText(T4_Actividad1.this, "Introduce un numero", Toast.LENGTH_SHORT).show();
 
-                } else {
+            } else {
 
-                    if(rBinario.isChecked()) {
-                        getBase();
-                        tBinario.setText(base);
-                        tOctal.setText(binarioOctal());
-                        tDecimal.setText(binarioDecimal());
-                        tHexa.setText(binarioHexa());
+                if(rBinario.isChecked()) {
+                    getBase();
+                    tBinario.setText(base);
+                    tOctal.setText(binarioOctal());
+                    tDecimal.setText(binarioDecimal());
+                    tHexa.setText(binarioHexa());
 
-                    } else if(rOctal.isChecked()) {
-                        getBase();
-                        tBinario.setText(octalBinario());
-                        tOctal.setText(base);
-                        tDecimal.setText(octalDecimal());
-                        tHexa.setText(octalHexa());
+                } else if(rOctal.isChecked()) {
+                    getBase();
+                    tBinario.setText(octalBinario());
+                    tOctal.setText(base);
+                    tDecimal.setText(octalDecimal());
+                    tHexa.setText(octalHexa());
 
 
-                    } else if(rDecimal.isChecked()) {
-                        getBase();
-                        tBinario.setText(decimalBinario());
-                        tOctal.setText(decimalOctal());
-                        tDecimal.setText(base);
-                        tHexa.setText(decimalHexa());
+                } else if(rDecimal.isChecked()) {
+                    getBase();
+                    tBinario.setText(decimalBinario());
+                    tOctal.setText(decimalOctal());
+                    tDecimal.setText(base);
+                    tHexa.setText(decimalHexa());
 
-                    } else if(rHexa.isChecked() && !base.equals("")){
-                        tBinario.setText(hexaBinario());
-                        tOctal.setText(hexaOctal());
-                        tDecimal.setText(hexaDecimal());
-                        tHexa.setText(base);
-                    }
+                } else if(rHexa.isChecked() && !base.equals("")){
+                    tBinario.setText(hexaBinario());
+                    tOctal.setText(hexaOctal());
+                    tDecimal.setText(hexaDecimal());
+                    tHexa.setText(base);
                 }
             }
         });
@@ -94,87 +89,70 @@ public class T4_Actividad1 extends AppCompatActivity {
 
     public String binarioDecimal() {
         int binario = Integer.parseInt(base, 2);
-        String decimal = String.valueOf(binario);
 
-        return decimal;
+        return String.valueOf(binario);
     }
 
     public String binarioOctal() {
         int num = Integer.parseInt(binarioDecimal());
-        String octal = Integer.toOctalString(num);
 
-        return octal;
+        return Integer.toOctalString(num);
     }
 
     public String binarioHexa() {
         int num = Integer.parseInt(binarioDecimal());
-        String hexa = Integer.toHexString(num);
 
-        return hexa;
+        return Integer.toHexString(num);
     }
 
     public String octalBinario(){
         int num = Integer.parseInt(octalDecimal());
-        String binario = Integer.toBinaryString(num);
 
-        return binario;
+        return Integer.toBinaryString(num);
     }
 
     public String octalDecimal() {
         int octal = Integer.parseInt(base, 8);
-        String decimal = String.valueOf(octal);
 
-        return decimal;
+        return String.valueOf(octal);
     }
 
     public String octalHexa() {
         int num = Integer.parseInt(octalDecimal());
-        String hexa = Integer.toHexString(num);
 
-        return hexa;
+        return Integer.toHexString(num);
     }
 
     public String decimalBinario() {
-        String binario = Integer.toBinaryString(numero);
 
-        return binario;
+        return Integer.toBinaryString(numero);
     }
 
     public String decimalOctal() {
-        String octal = Integer.toOctalString(numero);
 
-        return octal;
+        return Integer.toOctalString(numero);
     }
 
     public String decimalHexa() {
-        String hexa = Integer.toHexString(numero);
 
-        return hexa;
+        return Integer.toHexString(numero);
     }
 
     public String hexaBinario() {
         int num = Integer.parseInt(hexaDecimal());
-        String binario = Integer.toBinaryString(num);
 
-        return binario;
+        return Integer.toBinaryString(num);
     }
 
     public String hexaOctal(){
         int num = Integer.parseInt(hexaDecimal());
-        String octal = Integer.toOctalString(num);
 
-        return octal;
+        return Integer.toOctalString(num);
     }
 
     public String hexaDecimal() {
         int num = Integer.parseInt(base, 16);
-        String decimal = String.valueOf(num);
 
-        return decimal;
-    }
-
-
-    public boolean terminada(){
-        return true;
+        return String.valueOf(num);
     }
 }

@@ -2,12 +2,12 @@ package com.app.programacion_multimedia.tema8;
 
 public class Pescado {
 
-    private String nombre, tamaño, tipo;
+    private String nombre, size, tipo;
     private int precio;
 
-    public Pescado(String nombre, String tamaño, String tipo, int precio) {
+    public Pescado(String nombre, String size, String tipo, int precio) {
         this.nombre = nombre;
-        this.tamaño = tamaño;
+        this.size = size;
         this.tipo = tipo;
         this.precio = precio;
     }
@@ -20,12 +20,12 @@ public class Pescado {
         this.nombre = nombre;
     }
 
-    public String getTamaño() {
-        return tamaño;
+    public String getSize() {
+        return size;
     }
 
-    public void setTamaño(String tamaño) {
-        this.tamaño = tamaño;
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public String getTipo() {

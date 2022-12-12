@@ -8,23 +8,22 @@
     tools:context=".tema6.Frag_t6_casos">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="411dp"
+        android:layout_height="668dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="177dp" />
 
         <Button
             android:id="@+id/bCaso1_T6"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="55dp"
-            android:layout_marginTop="20dp"
-            android:text="Caso 1"
+            android:layout_marginTop="100dp"
+            android:text="@string/caso_1"
             android:textColor="#F6F3F3"
             android:textSize="20sp"
             app:cornerRadius="60dp" />
@@ -36,7 +35,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Caso 2"
+            android:text="@string/caso_2"
             android:textColor="#F6F3F3"
             android:textSize="20sp"
             app:cornerRadius="60dp" />
@@ -48,7 +47,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Caso 3"
+            android:text="@string/caso_3"
             android:textColor="#F6F3F3"
             android:textSize="20sp"
             app:cornerRadius="60dp" />
@@ -60,7 +59,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Caso 4"
+            android:text="@string/caso_4"
             android:textColor="#F6F3F3"
             android:textSize="20sp"
             app:cornerRadius="60dp" />
@@ -72,7 +71,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Caso 5"
+            android:text="@string/caso_5"
             android:textColor="#F6F3F3"
             android:textSize="20sp"
             app:cornerRadius="60dp" />

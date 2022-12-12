@@ -46,12 +46,7 @@ public class T7_Actividad1_ListAdapter extends BaseAdapter {
 
         String text = ingredientes.get(i);
         itemLista.setText(text);
-        itemLista.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(contexto, text, Toast.LENGTH_SHORT).show();
-            }
-        });
+        itemLista.setOnClickListener(view1 -> Toast.makeText(contexto, text, Toast.LENGTH_SHORT).show());
 
         return view;
     }

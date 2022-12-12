@@ -1,12 +1,10 @@
 package com.app.programacion_multimedia.tema7;
 
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
 
 import com.app.programacion_multimedia.R;
 import com.app.programacion_multimedia.databinding.T7Actividad2Binding;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;

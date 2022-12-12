@@ -7,18 +7,18 @@
         <item
             android:id="@+id/nav_tema4"
             android:icon="?android:attr/actionModeFindDrawable"
-            android:title="Tema 4" />
+            android:title="@string/tema_4" />
         <item
             android:id="@+id/nav_tema5"
             android:icon="?android:attr/actionModeFindDrawable"
-            android:title="Tema5" />
+            android:title="@string/tema5" />
         <item
             android:id="@+id/nav_tema6"
             android:icon="?android:attr/actionModeFindDrawable"
-            android:title="Tema6" />
+            android:title="@string/tema6" />
         <item
             android:id="@+id/nav_tema7"
             android:icon="?android:attr/actionModeFindDrawable"
-            android:title="Tema7" />
+            android:title="@string/tema7" />
     </group>
 </menu>

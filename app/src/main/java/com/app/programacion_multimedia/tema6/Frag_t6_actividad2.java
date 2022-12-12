@@ -21,12 +21,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Frag_t6_actividad2 extends Fragment implements View.OnClickListener {
 
-    private ReactButton bReaccion, bComentar, bCompartir;
+    private ReactButton bComentar;
     private EditText etComentar;
     private Button bAceptar, bCancelar;
     private TextView tComentario;
-    private FloatingActionButton fabPrevious, fabNext;
-    int images[] = {R.drawable.img_otono, R.drawable.img_invierno, R.drawable.img_primavera, R.drawable.img_verano, R.drawable.img_universo};
+    int[] images = {R.drawable.img_otono, R.drawable.img_invierno, R.drawable.img_primavera, R.drawable.img_verano, R.drawable.img_universo};
     private CircleImageView civ;
 
     @Override
@@ -34,15 +33,15 @@ public class Frag_t6_actividad2 extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.t6_frag_actividad2, container, false);
 
-        bReaccion = v.findViewById(R.id.bReaccion);
+        ReactButton bReaccion = v.findViewById(R.id.bReaccion);
         bComentar = v.findViewById(R.id.bComentar);
-        bCompartir = v.findViewById(R.id.bCompartir);
+        ReactButton bCompartir = v.findViewById(R.id.bCompartir);
         etComentar = v.findViewById(R.id.etComentar);
         bAceptar = v.findViewById(R.id.bAceptar);
         bCancelar = v.findViewById(R.id.bCancelar);
         tComentario = v.findViewById(R.id.tComentario);
-        fabPrevious = v.findViewById(R.id.fabPrevious);
-        fabNext = v.findViewById(R.id.fabNext);
+        FloatingActionButton fabPrevious = v.findViewById(R.id.fabPrevious);
+        FloatingActionButton fabNext = v.findViewById(R.id.fabNext);
         civ = v.findViewById(R.id.profileImage);
 
         civ.setImageResource(images[0]);

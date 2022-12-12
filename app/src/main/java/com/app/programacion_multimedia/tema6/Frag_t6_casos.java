@@ -14,22 +14,16 @@ import com.app.programacion_multimedia.R;
 
 public class Frag_t6_casos extends Fragment implements View.OnClickListener {
 
-    private Button bCaso1_T6, bCaso2_T6, bCaso3_T6, bCaso4_T6, bCaso5_T6;
-
-    public Frag_t6_casos() {
-        // Required empty public constructor
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.t6_frag_casos, container, false);
 
-        bCaso1_T6 = v.findViewById(R.id.bCaso1_T6);
-        bCaso2_T6 = v.findViewById(R.id.bCaso2_T6);
-        bCaso3_T6 = v.findViewById(R.id.bCaso3_T6);
-        bCaso4_T6 = v.findViewById(R.id.bCaso4_T6);
-        bCaso5_T6 = v.findViewById(R.id.bCaso5_T6);
+        Button bCaso1_T6 = v.findViewById(R.id.bCaso1_T6);
+        Button bCaso2_T6 = v.findViewById(R.id.bCaso2_T6);
+        Button bCaso3_T6 = v.findViewById(R.id.bCaso3_T6);
+        Button bCaso4_T6 = v.findViewById(R.id.bCaso4_T6);
+        Button bCaso5_T6 = v.findViewById(R.id.bCaso5_T6);
 
         bCaso1_T6.setOnClickListener(this);
         bCaso2_T6.setOnClickListener(this);

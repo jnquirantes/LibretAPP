@@ -2,7 +2,6 @@ package com.app.programacion_multimedia.tema7;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -16,9 +15,6 @@ public class Tema7 extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager2 viewPager2;
-    private ViewPageAdapter tabAdapter;
-    public static boolean tema7_1, tema7_2;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +25,7 @@ public class Tema7 extends AppCompatActivity {
         viewPager2 = findViewById(R.id.viewpager);
 
         tabLayout = findViewById(R.id.tabLayout);
-        tabAdapter = new ViewPageAdapter(this);
+        ViewPageAdapter tabAdapter = new ViewPageAdapter(this);
         viewPager2.setAdapter(tabAdapter);
 
 

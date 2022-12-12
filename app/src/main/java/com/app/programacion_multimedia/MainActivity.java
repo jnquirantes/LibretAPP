@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spinnerMain;
     String temas = "";
     private LottieAnimationView animation;
-    private boolean inicio = true;
     private Button elegir;
     public static boolean tema4, tema5, tema6, tema7, tema8;
 
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         spinnerMain = findViewById(R.id.spinner);
         String[] valores = {"Seleccione", "Tema 4","Tema 5","Tema 6","Tema 7", "Tema 8"};
-        spinnerMain.setAdapter(new ArrayAdapter<String>(this, R.layout.resource_item_spinner_main, valores));
+        spinnerMain.setAdapter(new ArrayAdapter<>(this, R.layout.resource_item_spinner_main, valores));
         spinnerMain.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
               @Override
               public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
@@ -58,48 +57,45 @@ public class MainActivity extends AppCompatActivity {
               }
         });
 
-       findViewById(R.id.Elegir).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+       findViewById(R.id.Elegir).setOnClickListener(v -> {
 
-              animation.setVisibility(View.VISIBLE);
-              android.os.SystemClock.sleep(5000);   //50 ms de delay
+         animation.setVisibility(View.VISIBLE);
+         android.os.SystemClock.sleep(5000);   //50 ms de delay
 
-                switch(temas) {
-                  case "Tema 4":
-                      Intent intent4 = new Intent(MainActivity.this, Tema4.class);
-                      tema4 = true;
-                      startActivity(intent4);
-                  break;
+           switch(temas) {
+             case "Tema 4":
+                 Intent intent4 = new Intent(MainActivity.this, Tema4.class);
+                 tema4 = true;
+                 startActivity(intent4);
+             break;
 
-                  case "Tema 5":
-                      Intent intent5 = new Intent(MainActivity.this, Tema5.class);
-                      tema5 = true;
-                      startActivity(intent5);
-                  break;
+             case "Tema 5":
+                 Intent intent5 = new Intent(MainActivity.this, Tema5.class);
+                 tema5 = true;
+                 startActivity(intent5);
+             break;
 
-                  case "Tema 6":
-                      Intent intent6 = new Intent(MainActivity.this, Tema6.class);
-                      tema6 = true;
-                      startActivity(intent6);
-                  break;
+             case "Tema 6":
+                 Intent intent6 = new Intent(MainActivity.this, Tema6.class);
+                 tema6 = true;
+                 startActivity(intent6);
+             break;
 
-                  case "Tema 7":
-                      Intent intent7 = new Intent(MainActivity.this, Tema7.class);
-                      tema7 = true;
-                      startActivity(intent7);
-                  break;
+             case "Tema 7":
+                 Intent intent7 = new Intent(MainActivity.this, Tema7.class);
+                 tema7 = true;
+                 startActivity(intent7);
+             break;
 
-                  case "Tema 8":
-                      Intent intent8 = new Intent(MainActivity.this, Tema8.class);
-                      tema8 = true;
-                      startActivity(intent8);
-                      break;
+             case "Tema 8":
+                 Intent intent8 = new Intent(MainActivity.this, Tema8.class);
+                 tema8 = true;
+                 startActivity(intent8);
+                 break;
 
 
-              }
+         }
 
-            }
-        });
+       });
     }
 }

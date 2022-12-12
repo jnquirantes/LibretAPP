@@ -16,27 +16,24 @@ import androidx.appcompat.app.AppCompatActivity;
 public class T7_Actividad1 extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private T7Actividad1Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-     binding = T7Actividad1Binding.inflate(getLayoutInflater());
+        com.app.programacion_multimedia.databinding.T7Actividad1Binding binding = T7Actividad1Binding.inflate(getLayoutInflater());
      setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarT7Activiidad1.toolbar);
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_add, R.id.nav_buscar)
                 .setOpenableLayout(drawer)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_t7_activiidad1);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
     }
 
     @Override
@@ -48,7 +45,7 @@ public class T7_Actividad1 extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_t7_activiidad1);
+        NavController navController = Navigation.findNavController(this, R.id.t7_nav_content_actividad1);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }

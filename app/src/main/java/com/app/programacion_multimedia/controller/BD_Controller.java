@@ -56,7 +56,6 @@ public class BD_Controller extends SQLiteOpenHelper {
         //Actividad 1
     public void insertarRecetas(EditText etTitulo, EditText etPreparacion, ArrayList<String> ingredientes) {
         bd = getWritableDatabase();
-        long newRowId;
 
         if(bd != null) {
             ContentValues values = new ContentValues();
@@ -66,7 +65,7 @@ public class BD_Controller extends SQLiteOpenHelper {
             for(int i=1; i<ingredientes.size(); i++) {
                 values.put("i" + i, ingredientes.get(i));
             }
-            newRowId = bd.insert("Recetas", "", values);
+            bd.insert("Recetas", "", values);
         }
 
     }
@@ -102,7 +101,7 @@ public class BD_Controller extends SQLiteOpenHelper {
                 recetas.add(new T7_Actividad1_Receta(titulo, preparacion, ingredientes));
 
             } while (c.moveToNext());
-
+            c.close();
         } else {
             Toast.makeText(contexto, "No hay ninguna receta", Toast.LENGTH_SHORT).show();
         }
@@ -116,8 +115,6 @@ public class BD_Controller extends SQLiteOpenHelper {
     public void insertarLibro(EditText etNombre, EditText etDescripcion, EditText etISBN, ImageView imagen){
         bd = getWritableDatabase();
 
-        long newRowId;
-
         if(bd != null) {
             ContentValues values = new ContentValues();
             values.put("nombre", etNombre.getText().toString());
@@ -125,7 +122,7 @@ public class BD_Controller extends SQLiteOpenHelper {
             values.put("ISBN", etISBN.getText().toString());
             values.put("imagenID", imagen.getId());
 
-            newRowId = bd.insert("AddLibros", "", values);
+            bd.insert("AddLibros", "", values);
         }
     }
 

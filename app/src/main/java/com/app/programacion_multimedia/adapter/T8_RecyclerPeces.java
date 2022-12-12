@@ -54,7 +54,7 @@ public class T8_RecyclerPeces extends RecyclerView.Adapter<T8_RecyclerPeces.Hold
     public void onBindViewHolder(@NonNull HolderList holder, int position) {
         holder.tName.setText(pescados.get(position).getNombre());
         holder.tType.setText(pescados.get(position).getTipo());
-        holder.tSize.setText(pescados.get(position).getTamaño());
+        holder.tSize.setText(pescados.get(position).getSize());
         holder.tPrice.setText(String.valueOf(pescados.get(position).getPrecio()));
         holder.ivFish.setImageResource(R.drawable.ic_orange_fish);
     }

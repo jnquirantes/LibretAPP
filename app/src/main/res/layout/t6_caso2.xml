@@ -12,22 +12,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="122dp" />
-
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="match_parent"
             android:layout_height="305dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="200dp"
             android:layout_marginBottom="10dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/an_informatico"/>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            app:lottie_rawRes="@raw/an_informatico" />
 
         <ProgressBar
             android:id="@+id/progress"

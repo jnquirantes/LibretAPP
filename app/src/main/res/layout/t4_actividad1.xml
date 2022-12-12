@@ -79,14 +79,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="232dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:weightSum="4">
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="39dp"
-                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -101,7 +97,7 @@
                 <EditText
                     android:id="@+id/etBase"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:autofillHints=""
                     android:ems="10"
@@ -123,22 +119,9 @@
                     android:textStyle="bold"
                     app:cornerRadius="50dp" />
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="26dp"
-                    android:layout_weight="1" />
             </LinearLayout>
 
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
         </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="77dp" />
 
         <TextView
             android:id="@+id/textView14"
@@ -175,7 +158,8 @@
                     android:textAlignment="textStart"
                     android:textColor="#3F51B5"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
 
                 <TextView
                     android:id="@+id/tBinario"
@@ -204,7 +188,8 @@
                     android:textAlignment="textStart"
                     android:textColor="#3F51B5"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
 
                 <TextView
                     android:id="@+id/tOctal"
@@ -233,7 +218,8 @@
                     android:textAlignment="textStart"
                     android:textColor="#3F51B5"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
 
                 <TextView
                     android:id="@+id/tDecimal"
@@ -262,7 +248,8 @@
                     android:textAlignment="textStart"
                     android:textColor="#3F51B5"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
 
                 <TextView
                     android:id="@+id/tHexa"

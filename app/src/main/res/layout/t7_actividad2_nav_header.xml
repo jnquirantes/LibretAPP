@@ -18,14 +18,14 @@
         android:layout_height="160dp"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:tint="#5A2424"
+        app:tint="#5A2424"
         app:srcCompat="@drawable/ic_orange_book" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Programacion Multimedia"
+        android:text="@string/asignatura"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp" />
 
@@ -33,6 +33,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tema 7"
+        android:text="@string/tema7"
         android:textSize="18sp" />
 </LinearLayout>

@@ -16,20 +16,19 @@ import com.app.programacion_multimedia.R;
 public class Frag_t6_actividad1 extends Fragment implements View.OnClickListener{
 
     private ViewFlipper v_fliper;
-    private Button bPlay, bStop;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.t6_frag_actividad1, container, false);
 
-        bPlay = v.findViewById(R.id.bPlay);
-        bStop = v.findViewById(R.id.bStop);
+        Button bPlay = v.findViewById(R.id.bPlay);
+        Button bStop = v.findViewById(R.id.bStop);
 
         bPlay.setOnClickListener(this);
         bStop.setOnClickListener(this);
 
-        int images[] = {R.drawable.img_otono, R.drawable.img_invierno, R.drawable.img_primavera, R.drawable.img_verano, R.drawable.img_universo};
+        int[] images = {R.drawable.img_otono, R.drawable.img_invierno, R.drawable.img_primavera, R.drawable.img_verano, R.drawable.img_universo};
         v_fliper = v.findViewById(R.id.v_flipper);
 
         for(int image: images){

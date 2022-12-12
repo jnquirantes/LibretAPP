@@ -3,8 +3,6 @@ package com.app.programacion_multimedia.tema6;
 import com.amrdeveloper.reactbutton.Reaction;
 import com.app.programacion_multimedia.R;
 
-import mehdi.sakout.aboutpage.AboutPage;
-
 public class T6_FbReaction {
 
     public static Reaction defaultReact = new Reaction(

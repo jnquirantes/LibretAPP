@@ -13,11 +13,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:hint="Escribe un ingrediente..."
+        android:hint="@string/escribe_un_ingrediente"
         android:inputType="textPersonName"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        app:layout_constraintTop_toBottomOf="@+id/textView32"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView32"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Introduce un ingrediente"
+        android:text="@string/escriba_aqui"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +38,7 @@
         android:layout_height="62dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="48dp"
-        android:contentDescription="search"
+        android:contentDescription="@string/button"
         app:icon="?android:attr/actionModeWebSearchDrawable"
         app:iconGravity="start"
         app:iconPadding="0dp"

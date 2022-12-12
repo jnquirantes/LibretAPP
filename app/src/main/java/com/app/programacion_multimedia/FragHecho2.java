@@ -8,10 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.app.programacion_multimedia.tema4.T4_Actividad1;
-import com.app.programacion_multimedia.tema7.T7_Actividad1;
 import com.app.programacion_multimedia.tema7.T7_Actividad2;
-import com.app.programacion_multimedia.tema7.Tema7;
 
 public class FragHecho2 extends Fragment {
 
@@ -23,12 +20,9 @@ public class FragHecho2 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.frag_hecho, container, false);
 
-        view.findViewById(R.id.bTarea).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (tema7) {
-                    startActivity(new Intent(FragHecho2.this.getContext(), T7_Actividad2.class));
-                }
+        view.findViewById(R.id.bTarea).setOnClickListener(v -> {
+            if (tema7) {
+                startActivity(new Intent(FragHecho2.this.getContext(), T7_Actividad2.class));
             }
         });
 

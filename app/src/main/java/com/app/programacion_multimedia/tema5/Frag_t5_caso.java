@@ -17,14 +17,12 @@ import java.util.ArrayList;
 
 public class Frag_t5_caso extends Fragment {
 
-    private RecyclerView listaEjemplo;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.t5_frag_caso, container, false);
 
-        listaEjemplo = v.findViewById(R.id.listaEjemplo);
+        RecyclerView listaEjemplo = v.findViewById(R.id.listaEjemplo);
 
         ArrayList<ElementoLista> elementos =  new ArrayList<>();
 

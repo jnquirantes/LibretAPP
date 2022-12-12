@@ -2,7 +2,6 @@ package com.app.programacion_multimedia.tema6;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
 
 import com.app.programacion_multimedia.R;
 import com.google.android.material.navigation.NavigationView;
@@ -20,25 +19,20 @@ import com.google.android.material.snackbar.Snackbar;
 public class T6_Caso1 extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private T6Caso1Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = T6Caso1Binding.inflate(getLayoutInflater());
+        com.app.programacion_multimedia.databinding.T6Caso1Binding binding = T6Caso1Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarT6Caso1.toolbar);
-        binding.appBarT6Caso1.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        binding.appBarT6Caso1.fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show());
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(

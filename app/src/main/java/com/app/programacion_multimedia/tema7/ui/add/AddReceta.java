@@ -21,8 +21,6 @@ import java.util.ArrayList;
 public class AddReceta extends Fragment {
 
     private EditText etTitulo, etPreparacion, etIngredientes;
-    private Button bAñadir;
-    private FloatingActionButton fabAdd;
     private ArrayList<String> ingredientes;
     private BD_Controller bd;
     private ListView lv;
@@ -35,8 +33,8 @@ public class AddReceta extends Fragment {
         etTitulo = view.findViewById(R.id.etTitulo);
         etPreparacion = view.findViewById(R.id.etPreparacion);
         etIngredientes = view.findViewById(R.id.etIngredientes);
-        bAñadir = view.findViewById(R.id.bAñadir);
-        fabAdd = view.findViewById(R.id.fabAdd);
+        Button bAdd2 = view.findViewById(R.id.bAñadir);
+        FloatingActionButton fabAdd = view.findViewById(R.id.fabAdd);
         lv = view.findViewById(R.id.lv);
 
         etTitulo.setText("");
@@ -46,50 +44,44 @@ public class AddReceta extends Fragment {
         ingredientes = new ArrayList<>();
         bd = new BD_Controller(AddReceta.this.getContext());
 
-        bAñadir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!etIngredientes.getText().toString().equals("")) {
-                    ingredientes.add(etIngredientes.getText().toString());
-                    lvAdapter = new T7_Actividad1_ListAdapter(AddReceta.this.getContext(), ingredientes);
-                    lv.setAdapter(lvAdapter);
-                    etIngredientes.setText("");
+        bAdd2.setOnClickListener(v -> {
+            if(!etIngredientes.getText().toString().equals("")) {
+                ingredientes.add(etIngredientes.getText().toString());
+                lvAdapter = new T7_Actividad1_ListAdapter(AddReceta.this.getContext(), ingredientes);
+                lv.setAdapter(lvAdapter);
+                etIngredientes.setText("");
 
-                } else {
-                    Toast.makeText(AddReceta.this.getContext(), "Introduce un ingrediente", Toast.LENGTH_SHORT).show();
-                }
+            } else {
+                Toast.makeText(AddReceta.this.getContext(), "Introduce un ingrediente", Toast.LENGTH_SHORT).show();
             }
         });
 
-        fabAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(etTitulo.getText().toString().equals("")) {
-                    Toast.makeText(AddReceta.this.getContext(), "Introduce un titulo", Toast.LENGTH_SHORT).show();
-                    etTitulo.requestFocus();
-                    return;
-                }
-
-                if (etPreparacion.getText().toString().equals("")) {
-                    Toast.makeText(AddReceta.this.getContext(), "Introduce un modo de preparación", Toast.LENGTH_SHORT).show();
-                    etPreparacion.requestFocus();
-                    return;
-                }
-
-                if(ingredientes.isEmpty()) {
-                    Toast.makeText(AddReceta.this.getContext(), "Introduce al menos un ingrediente", Toast.LENGTH_SHORT).show();
-                    etIngredientes.requestFocus();
-                    return;
-                }
-
-                bd.insertarRecetas(etTitulo, etPreparacion, ingredientes);
-                Toast.makeText(AddReceta.this.getContext(), "Receta añadida", Toast.LENGTH_SHORT).show();
-                etTitulo.setText("");
-                etPreparacion.setText("");
-                ingredientes.clear();
-                lv.setAdapter(lvAdapter);
-                bd.cerrarBD();
+        fabAdd.setOnClickListener(v -> {
+            if(etTitulo.getText().toString().equals("")) {
+                Toast.makeText(AddReceta.this.getContext(), "Introduce un titulo", Toast.LENGTH_SHORT).show();
+                etTitulo.requestFocus();
+                return;
             }
+
+            if (etPreparacion.getText().toString().equals("")) {
+                Toast.makeText(AddReceta.this.getContext(), "Introduce un modo de preparación", Toast.LENGTH_SHORT).show();
+                etPreparacion.requestFocus();
+                return;
+            }
+
+            if(ingredientes.isEmpty()) {
+                Toast.makeText(AddReceta.this.getContext(), "Introduce al menos un ingrediente", Toast.LENGTH_SHORT).show();
+                etIngredientes.requestFocus();
+                return;
+            }
+
+            bd.insertarRecetas(etTitulo, etPreparacion, ingredientes);
+            Toast.makeText(AddReceta.this.getContext(), "Receta añadida", Toast.LENGTH_SHORT).show();
+            etTitulo.setText("");
+            etPreparacion.setText("");
+            ingredientes.clear();
+            lv.setAdapter(lvAdapter);
+            bd.cerrarBD();
         });
 
         return view;

@@ -29,12 +29,10 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
 
     private Spinner spinnerMusica;
     private String cancion;
-    private TextView seekBarHint;
     private int cancionID, flujodemusica;
     private MediaPlayer mp;
-    private Button bComenzar, bParar, bPausar;
-    private SeekBar seekBar;
-    private ImageView bTrompeta, bTambor, bCabra, bPajaro, bSeta, bCoin;
+    private Button bComenzar;
+    private Button bPausar;
     private SoundPool sp;
     private boolean loaded;
 
@@ -44,20 +42,20 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.t7_frag_casos, container, false);
 
         bComenzar = v.findViewById(R.id.bComenzar);
-        bParar = v.findViewById(R.id.bParar);
+        Button bParar = v.findViewById(R.id.bParar);
         bPausar = v.findViewById(R.id.bPausar);
 
         spinnerMusica = v.findViewById(R.id.spinnerMusica);
 
-        seekBar = v.findViewById(R.id.seekBar);
-        seekBarHint = v.findViewById(R.id.seekBarHint);
+        SeekBar seekBar = v.findViewById(R.id.seekBar);
+        TextView seekBarHint = v.findViewById(R.id.seekBarHint);
 
-        bTrompeta = v.findViewById(R.id.bTrompeta);
-        bTambor = v.findViewById(R.id.bTambor);
-        bCabra = v.findViewById(R.id.bCabra);
-        bPajaro = v.findViewById(R.id.bPajaro);
-        bSeta = v.findViewById(R.id.bSeta);
-        bCoin = v.findViewById(R.id.bCoin);
+        ImageView bTrompeta = v.findViewById(R.id.bTrompeta);
+        ImageView bTambor = v.findViewById(R.id.bTambor);
+        ImageView bCabra = v.findViewById(R.id.bCabra);
+        ImageView bPajaro = v.findViewById(R.id.bPajaro);
+        ImageView bSeta = v.findViewById(R.id.bSeta);
+        ImageView bCoin = v.findViewById(R.id.bCoin);
 
         bComenzar.setOnClickListener(this);
         bParar.setOnClickListener(this);
@@ -76,7 +74,7 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
         flujodemusica = 0;
         loaded = false;
 
-        spinnerMusica.setAdapter(new ArrayAdapter<String>(Frag_t7_casos.this.getContext(), R.layout.resource_item_spinner_main, valores));
+        spinnerMusica.setAdapter(new ArrayAdapter<>(Frag_t7_casos.this.getContext(), R.layout.resource_item_spinner_main, valores));
         spinnerMusica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
@@ -97,7 +95,7 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case (R.id.bComenzar):
-                cambiarMúsica();
+                cambiarMusica();
                 if(mp != null){
                     if(!mp.isPlaying()) {
                         mp.start();
@@ -162,7 +160,7 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
         }
     }
 
-    public void cambiarMúsica (){
+    public void cambiarMusica (){
         switch (cancion){
             case "Bach":
                 cancionID = R.raw.mu_bach;
@@ -204,11 +202,6 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
         }
 
         flujodemusica = sp.load(Frag_t7_casos.this.getContext(), sonidoID, 1);
-        sp.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
-            public void onLoadComplete(SoundPool soundPool, int sampleId,int status)
-            {
-                loaded = true;
-            }
-        });
+        sp.setOnLoadCompleteListener((soundPool, sampleId, status) -> loaded = true);
     }
 }

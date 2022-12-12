@@ -16,7 +16,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="44dp"
         android:gravity="center_vertical"
-        android:text="Agregue una imagen"
+        android:text="@string/agregue_imagen"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView36" />
@@ -28,7 +28,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="116dp"
         android:gravity="center_vertical"
-        android:text="ISBN"
+        android:text="@string/isbn"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
@@ -40,12 +40,13 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="Escriba un titulo"
+        android:hint="@string/escriba_aqui"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textStyle="italic"
         app:layout_constraintStart_toEndOf="@+id/textView33"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etNombre3"
@@ -54,11 +55,12 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="296dp"
         android:ems="10"
-        android:hint="Escriba el ISBN"
+        android:hint="@string/escriba_aqui"
         android:inputType="textPersonName"
         android:textStyle="italic"
         app:layout_constraintStart_toEndOf="@+id/textView33"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etDescripcion"
@@ -68,11 +70,12 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:gravity="top"
-        android:hint="Escriba una descripcion"
+        android:hint="@string/escriba_aqui"
         android:inputType="textPersonName"
         android:textStyle="italic"
         app:layout_constraintStart_toEndOf="@+id/textView35"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/etNombre"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView33"
@@ -81,7 +84,7 @@
         android:layout_marginStart="23dp"
         android:layout_marginTop="54dp"
         android:gravity="center_vertical"
-        android:text="Titutlo"
+        android:text="@string/t_tulo"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -93,7 +96,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="44dp"
         android:gravity="center_vertical"
-        android:text="Descripcion"
+        android:text="@string/descripcion"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
@@ -106,8 +109,9 @@
         android:layout_marginTop="12dp"
         android:foregroundTint="#AE2424"
         android:src="@drawable/ic_menu_camera"
-        android:tint="#E19E37"
+        app:tint="#E19E37"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+        app:layout_constraintTop_toBottomOf="@+id/textView37"
+        android:contentDescription="@string/img" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,50 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".tema6.Frag_t6_actividad2">
 
-    <Space
-        android:id="@+id/space2"
-        android:layout_width="413dp"
-        android:layout_height="72dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
         android:layout_width="316dp"
         android:layout_height="260dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/img_otono"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/fabNext"
         app:layout_constraintStart_toEndOf="@+id/fabPrevious"
-        app:layout_constraintTop_toBottomOf="@+id/space2" />
+        app:layout_constraintTop_toBottomOf="@+id/space" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:clickable="true"
-        android:contentDescription="next"
+        android:contentDescription="@string/boton_next"
         android:src="@drawable/ic_next"
         app:backgroundTint="#FFFFFF"
         app:elevation="16dp"
         app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="212dp"
         android:layout_weight="1"
         android:clickable="true"
         android:contentDescription="@string/action_settings"
@@ -58,26 +52,24 @@
         app:elevation="16dp"
         app:fabSize="mini"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="374dp"
         android:layout_height="49dp"
-        android:layout_marginTop="161dp"
+        android:layout_marginBottom="48dp"
         android:orientation="horizontal"
         android:weightSum="3"
+        app:layout_constraintBottom_toTopOf="@+id/etComentar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fabNext">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.amrdeveloper.reactbutton.ReactButton
             android:id="@+id/bReaccion"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:background="@color/white"
@@ -88,8 +80,6 @@
             android:id="@+id/bComentar"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:background="@color/white"
@@ -100,8 +90,6 @@
             android:id="@+id/bCompartir"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:background="@color/white"
@@ -117,7 +105,7 @@
         android:layout_marginTop="20dp"
         android:ems="50"
         android:gravity="bottom"
-        android:hint="Escribe aqui...."
+        android:hint="@string/escribe_aqui"
         android:inputType="textMultiLine"
         android:selectAllOnFocus="true"
         android:textStyle="italic"
@@ -125,17 +113,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/bAceptar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aceptar"
+        android:text="@string/boton_aceptar"
         android:textColor="#F8F8F8"
         android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/bCancelar"
-        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintHorizontal_bias="0.885"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etComentar" />
 
@@ -143,8 +132,8 @@
         android:id="@+id/bCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="Cancelar"
+        android:layout_marginEnd="20dp"
+        android:text="@string/boton_cancelar"
         android:textColor="#F8F8F8"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,6 +150,15 @@
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bAceptar" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="414dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/profileImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

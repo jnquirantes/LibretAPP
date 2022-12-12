@@ -26,11 +26,10 @@ public class T5_ListAdapter extends RecyclerView.Adapter<T5_ListAdapter.HolderLi
             tDos = itemView.findViewById(R.id.tDos);
         }
     }
-    private Context contexto;
+
     private ArrayList<ElementoLista> elementos;
 
     public T5_ListAdapter(Context contexto, ArrayList<ElementoLista> elementos) {
-        this.contexto = contexto;
         this.elementos = elementos;
     }
 
@@ -45,8 +44,7 @@ public class T5_ListAdapter extends RecyclerView.Adapter<T5_ListAdapter.HolderLi
     @Override
     public T5_ListAdapter.HolderList onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.t5_elemento_lista, parent, false);
-        HolderList hl = new HolderList(v);
-        return hl;
+        return new HolderList(v);
     }
 
     @Override

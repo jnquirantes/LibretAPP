@@ -8,37 +8,35 @@
     tools:context=".tema7.Frag_t7_casos">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="412dp"
+        android:layout_height="622dp"
+        android:layout_marginTop="95dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="55dp">
-
-        <Space
-            android:id="@+id/space3"
-            android:layout_width="411dp"
-            android:layout_height="70dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/architects_daughter"
-            android:text="Música"
+            android:text="@string/m_sica"
             android:textAlignment="center"
-            android:textSize="36dp" />
+            android:textSize="30sp" />
 
         <Spinner
             android:id="@+id/spinnerMusica"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
-            android:contentDescription="Spinner" />
+            android:contentDescription="@string/spinner" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -48,18 +46,17 @@
                 android:layout_width="335dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:background="#F1D1A1"
                 android:thumb="@android:drawable/status_bar_item_background" />
 
             <TextView
                 android:id="@+id/seekBarHint"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:inputType="number"
                 android:minHeight="48dp"
                 android:text="00:00"
                 android:textSize="16sp"
@@ -67,9 +64,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
             android:divider="?android:attr/fastScrollThumbDrawable"
             android:orientation="horizontal"
             android:weightSum="3">
@@ -80,7 +77,7 @@
                 android:layout_height="55dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:contentDescription="Stop"
+                android:contentDescription="@string/stop"
                 android:gravity="center_horizontal"
                 app:cornerRadius="20dp"
                 app:icon="@drawable/ic_white_stop"
@@ -96,7 +93,7 @@
                 android:layout_height="54dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:contentDescription="Play"
+                android:contentDescription="@string/play"
                 android:gravity="center_horizontal"
                 app:cornerRadius="20dp"
                 app:icon="@android:drawable/ic_media_play"
@@ -112,7 +109,7 @@
                 android:layout_height="55dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:contentDescription="Pause"
+                android:contentDescription="@string/button"
                 android:gravity="center_horizontal"
                 app:cornerRadius="20dp"
                 app:icon="@android:drawable/ic_media_pause"
@@ -127,32 +124,32 @@
         <TextView
             android:id="@+id/textView20"
             android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/architects_daughter"
-            android:text="Sonidos"
+            android:text="@string/sonidos"
             android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textSize="30sp" />
 
         <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="319dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
             android:layout_weight="4"
-            android:clipToPadding="true"
-            android:paddingHorizontal="25dp">
+            android:clipToPadding="false"
+            android:paddingHorizontal="10dp">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="0dp"
                 android:background="#FAE1C5">
 
                 <TextView
                     android:id="@+id/textView25"
                     android:layout_width="145dp"
                     android:layout_height="wrap_content"
-                    android:text="Instrumentos"
+                    android:text="@string/instrumentos"
                     android:textAlignment="center"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -166,6 +163,7 @@
                     android:id="@+id/bTrompeta"
                     android:layout_width="111dp"
                     android:layout_height="88dp"
+                    android:contentDescription="@string/img"
                     android:src="@drawable/ic_trompeta" />
 
                 <ImageView
@@ -173,6 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="60dp"
+                    android:contentDescription="@string/img"
                     android:src="@drawable/ic_tambor" />
 
             </TableRow>
@@ -186,7 +185,7 @@
                     android:id="@+id/textView26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Animales"
+                    android:text="@string/animales"
                     android:textAlignment="center"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -200,6 +199,7 @@
                     android:id="@+id/bCabra"
                     android:layout_width="wrap_content"
                     android:layout_height="87dp"
+                    android:contentDescription="@string/img"
                     android:src="@drawable/ic_cabra" />
 
                 <ImageView
@@ -207,6 +207,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="60dp"
+                    android:contentDescription="@string/img"
                     android:src="@drawable/ic_pajaro" />
 
             </TableRow>
@@ -220,7 +221,7 @@
                     android:id="@+id/textView27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Juegos"
+                    android:text="@string/juegos"
                     android:textAlignment="center"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -234,6 +235,7 @@
                     android:id="@+id/bSeta"
                     android:layout_width="wrap_content"
                     android:layout_height="72dp"
+                    android:contentDescription="@string/img"
                     android:src="@drawable/ic_seta_vida" />
 
                 <ImageView
@@ -241,6 +243,7 @@
                     android:layout_width="116dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="60dp"
+                    android:contentDescription="@string/img"
                     android:src="@drawable/ic_coin_mario" />
 
             </TableRow>

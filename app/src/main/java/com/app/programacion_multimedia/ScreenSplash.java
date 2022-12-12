@@ -25,25 +25,22 @@ public class ScreenSplash extends AppCompatActivity {
         handler = new Handler();
         progress = 0;
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (progress < 100) {
-                    int n = new Random().nextInt(4);
-                    progress += n;
-                    android.os.SystemClock.sleep(50);   //50 ms de delay
+        new Thread(() -> {
+            while (progress < 100) {
+                int n = new Random().nextInt(4);
+                progress += n;
+                android.os.SystemClock.sleep(50);   //50 ms de delay
 
-                    handler.post(() -> {
-                        progressBar.setProgress(progress); //Cambia la barra de progreso
-                    });
-                }
-
-                //Cuando progress = 100
                 handler.post(() -> {
-                    ScreenSplash.this.startActivity(new Intent(ScreenSplash.this.getApplicationContext(), MainActivity.class));
-                    ScreenSplash.this.finish();
+                    progressBar.setProgress(progress); //Cambia la barra de progreso
                 });
             }
+
+            //Cuando progress = 100
+            handler.post(() -> {
+                ScreenSplash.this.startActivity(new Intent(ScreenSplash.this.getApplicationContext(), MainActivity.class));
+                ScreenSplash.this.finish();
+            });
         }).start();
     }
 }

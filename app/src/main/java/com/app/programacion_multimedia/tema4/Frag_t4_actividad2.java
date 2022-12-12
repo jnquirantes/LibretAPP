@@ -31,23 +31,20 @@ public class Frag_t4_actividad2 extends Fragment {
 
         etURL = view.findViewById(R.id.etURL);
 
-        view.findViewById(R.id.bBuscar).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ruta = etURL.getText().toString().trim();
-                if (!Patterns.WEB_URL.matcher(ruta).matches()) {
-                    Toast.makeText(Frag_t4_actividad2.this.getContext(), "Introduzca una URL correcta", Toast.LENGTH_SHORT).show();
-                    etURL.requestFocus();
-                    return;
+        view.findViewById(R.id.bBuscar).setOnClickListener(v -> {
+            ruta = etURL.getText().toString().trim();
+            if (!Patterns.WEB_URL.matcher(ruta).matches()) {
+                Toast.makeText(Frag_t4_actividad2.this.getContext(), "Introduzca una URL correcta", Toast.LENGTH_SHORT).show();
+                etURL.requestFocus();
+                return;
 
-                } else {
-                    ruta = "http:\\" + etURL.getText().toString().trim();
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(ruta));
-                    startActivity(intent);
-                }
-
+            } else {
+                ruta = "http:\\" + etURL.getText().toString().trim();
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(ruta));
+                startActivity(intent);
             }
+
         });
 
         return view;

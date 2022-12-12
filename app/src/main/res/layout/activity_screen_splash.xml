@@ -26,16 +26,12 @@
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/an_splash_screen"/>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="183dp" />
-
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="348dp"
             android:layout_height="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="175dp"
             android:indeterminate="false"
             android:progressDrawable="@drawable/resource_progress" />
     </LinearLayout>

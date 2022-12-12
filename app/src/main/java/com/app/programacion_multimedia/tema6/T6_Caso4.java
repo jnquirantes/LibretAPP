@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,16 +15,14 @@ import java.util.Random;
 
 public class T6_Caso4 extends AppCompatActivity implements View.OnClickListener {
 
-    private Button bDefecto, bAleatorioo, bPersonalizado;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.t6_caso4);
 
-        bDefecto = findViewById(R.id.bDefecto);
-        bAleatorioo = findViewById(R.id.bAleatorio);
-        bPersonalizado = findViewById(R.id.bPersonalizado);
+        Button bDefecto = findViewById(R.id.bDefecto);
+        Button bAleatorioo = findViewById(R.id.bAleatorio);
+        Button bPersonalizado = findViewById(R.id.bPersonalizado);
 
         bDefecto.setOnClickListener(this);
         bAleatorioo.setOnClickListener(this);
@@ -45,31 +41,31 @@ public class T6_Caso4 extends AppCompatActivity implements View.OnClickListener 
             case(R.id.bAleatorio):
                 Random r = new Random();
                 Toast t2 = new Toast(this);
-                View layout = getLayoutInflater().inflate(R.layout.t6_toast, (ViewGroup) findViewById(R.id.lytLayout));
+                View layout = getLayoutInflater().inflate(R.layout.t6_toast, findViewById(R.id.lytLayout));
                 TextView tMessage = layout.findViewById(R.id.tMessage);
-                tMessage.setText("Toast personalizado");
+                tMessage.setText(R.string.custom_toas);
                 t2.setDuration(Toast.LENGTH_SHORT);
                 t2.setView(layout);
                 switch (r.nextInt(4)) {
 
                     case 0:
                         t2.setGravity(Gravity.CENTER | Gravity.TOP, 0, 25);
-                        tMessage.setText("Toast arriba");
+                        tMessage.setText(R.string.up_toast);
                     break;
 
                     case 1:
                         t2.setGravity(Gravity.CENTER | Gravity.LEFT, 25, 0);
-                        tMessage.setText("Toast izquierda");
+                        tMessage.setText(R.string.left_toast);
                     break;
 
                     case 2:
                         t2.setGravity(Gravity.CENTER | Gravity.RIGHT, 0, 0);
-                        tMessage.setText("Toast derecha");
+                        tMessage.setText(R.string.right_toast);
                     break;
 
                     case 3:
                         t2.setGravity(Gravity.CENTER | Gravity.BOTTOM, 0, 0);
-                        tMessage.setText("Toast abajo");
+                        tMessage.setText(R.string.bottom_toast);
                     break;
                 }
                 t2.show();
@@ -77,9 +73,9 @@ public class T6_Caso4 extends AppCompatActivity implements View.OnClickListener 
 
             case(R.id.bPersonalizado):
                 Toast t3 = new Toast(this);
-                View layout2 = getLayoutInflater().inflate(R.layout.t6_toast, (ViewGroup) findViewById(R.id.lytLayout));
+                View layout2 = getLayoutInflater().inflate(R.layout.t6_toast, findViewById(R.id.lytLayout));
                 TextView tMessage2 = layout2.findViewById(R.id.tMessage);
-                tMessage2.setText("Toast personalizado");
+                tMessage2.setText(R.string.custom_toas);
                 t3.setDuration(Toast.LENGTH_SHORT);
                 t3.setView(layout2);
                 t3.show();
