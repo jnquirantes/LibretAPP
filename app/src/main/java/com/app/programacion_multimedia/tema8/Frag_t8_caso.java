@@ -25,7 +25,7 @@ public class Frag_t8_caso extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.frag_t8_caso, container, false);
+        View v = inflater.inflate(R.layout.t8_frag_caso, container, false);
 
         RecyclerView recycler = v.findViewById(R.id.recyclerFish);
 

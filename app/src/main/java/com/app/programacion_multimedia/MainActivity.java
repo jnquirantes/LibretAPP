@@ -59,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
        findViewById(R.id.Elegir).setOnClickListener(v -> {
 
-         animation.setVisibility(View.VISIBLE);
-         android.os.SystemClock.sleep(5000);   //50 ms de delay
-
            switch(temas) {
              case "Tema 4":
                  Intent intent4 = new Intent(MainActivity.this, Tema4.class);
@@ -89,11 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
              case "Tema 8":
                  Intent intent8 = new Intent(MainActivity.this, Tema8.class);
+
                  tema8 = true;
                  startActivity(intent8);
                  break;
-
-
          }
 
        });

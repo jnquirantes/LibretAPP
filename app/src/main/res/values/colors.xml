@@ -16,6 +16,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FF9800</color>
     <color name="holo_orange_dark">#88460D</color>
-    <color name="background_dark">#000000</color>
     <color name="holo_orange_light">#F8BB62</color>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tema6.ui.gallery.GalleryFragment">
+    tools:context=".tema7.ui.buscar.BuscarReceta">
 
     <EditText
         android:id="@+id/etBuscar"

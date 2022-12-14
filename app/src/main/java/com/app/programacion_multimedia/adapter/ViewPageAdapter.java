@@ -1,5 +1,7 @@
 package com.app.programacion_multimedia.adapter;
 
+import android.widget.ImageButton;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -18,6 +20,7 @@ import com.app.programacion_multimedia.tema6.Frag_t6_actividad2;
 import com.app.programacion_multimedia.tema6.Frag_t6_casos;
 import com.app.programacion_multimedia.tema7.Frag_t7_casos;
 import com.app.programacion_multimedia.tema8.Frag_t8_caso;
+import com.google.android.material.internal.ContextUtils;
 
 
 public class ViewPageAdapter extends FragmentStateAdapter {
@@ -28,8 +31,6 @@ public class ViewPageAdapter extends FragmentStateAdapter {
     private boolean tema7 = MainActivity.tema7;
     private boolean tema8 = MainActivity.tema8;
 
-
-
     public ViewPageAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
@@ -37,7 +38,6 @@ public class ViewPageAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-
         if(tema4) {
             switch (position) {
                 case 0:

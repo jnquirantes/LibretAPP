@@ -101,7 +101,6 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
                         mp.start();
                         bComenzar.setBackgroundColor(Color.GREEN);
                         bPausar.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
-
                     }
                 }
             break;

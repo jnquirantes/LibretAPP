@@ -21,7 +21,6 @@ public class Tema7 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temas);
 
-        //findViewById(R.id.tabLayoutLogin);
         viewPager2 = findViewById(R.id.viewpager);
 
         tabLayout = findViewById(R.id.tabLayout);
@@ -46,7 +45,6 @@ public class Tema7 extends AppCompatActivity {
             }
         });
 
-        //ERROR al entrar desde StartScreenActivity, no cambia la barra inferior
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {

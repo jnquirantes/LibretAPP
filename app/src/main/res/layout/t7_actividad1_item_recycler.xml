@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/orange"
-    android:clickable="true"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="12dp"
-    app:layoutDescription="@xml/t7_actividad1_item_recycler_scene">
+    android:layout_height="110dp"
+    android:background="@color/white"
+    android:clickable="true">
 
     <TextView
         android:id="@+id/tTitulo"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="78dp"
-        android:layout_margin="18dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
         android:background="#F3D096"
         android:gravity="center_vertical"
         android:padding="10dp"
         android:paddingHorizontal="10dp"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

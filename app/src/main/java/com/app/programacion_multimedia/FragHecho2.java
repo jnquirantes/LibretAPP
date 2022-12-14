@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.app.programacion_multimedia.tema7.T7_Actividad2;
-
 public class FragHecho2 extends Fragment {
 
     private boolean tema7 = MainActivity.tema7;
@@ -22,7 +20,7 @@ public class FragHecho2 extends Fragment {
 
         view.findViewById(R.id.bTarea).setOnClickListener(v -> {
             if (tema7) {
-                startActivity(new Intent(FragHecho2.this.getContext(), T7_Actividad2.class));
+                //startActivity(new Intent(FragHecho2.this.getContext(), T7_Actividad2.class));
             }
         });
 

@@ -39,9 +39,9 @@ public class Frag_t6_casos extends Fragment implements View.OnClickListener {
 
         switch (v.getId()){
 
-            case R.id.bCaso1_T6:
+            /*case R.id.bCaso1_T6:
                 startActivity(new Intent(Frag_t6_casos.this.getContext(), T6_Caso1.class));
-            break;
+            break;*/
 
             case R.id.bCaso2_T6:
                 startActivity(new Intent(Frag_t6_casos.this.getContext(), T6_Caso2.class));

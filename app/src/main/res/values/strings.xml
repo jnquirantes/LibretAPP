@@ -3,7 +3,7 @@
     <string name="title_activity_tema3">Tema3</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
-    <string name="title_activity_t6_caso1">T6_Caso1</string>
+    <string name="title_activity_t6_caso1">Tema 6: NavigationDrawer</string>
     <string name="navigation_drawer_open">Abrir navigation drawer</string>
     <string name="navigation_drawer_close">Cerrar navigation drawer</string>
     <string name="action_settings">Configuración</string>
@@ -27,12 +27,12 @@
     <string name="attachment_summary_off">Solo descargar archivos adjuntos manualmente</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_t7_actividad1">T7_Actividad1</string>
+    <string name="title_activity_t7_actividad1">T7: Actividad 1</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="title_activity_t7_activiidad1">T7_Activiidad1</string>
-    <string name="title_activity_t7_actividad2">T7_Actividad2</string>
+    <string name="title_activity_t7_activiidad1">Tema 7: Activiidad 1</string>
+    <string name="title_activity_t7_actividad2">Tema 7: Actividad2</string>
     <string name="title_base_numero">Base del número</string>
     <string name="decimal">Decimal</string>
     <string name="n_mero">Número</string>
@@ -111,4 +111,9 @@
     <string name="add_libro">Añadir libro</string>
     <string name="eliminar_isbn">Eliminar libro(por ISBN)</string>
     <string name="modificar_isbn">Modificar libro(por ISBN)</string>
+    <string name="open">Abrir código</string>
+    <string name="download">Descargar código</string>
+    <string name="title_activity_t11">T1_1</string>
+    <string name="title_activity_prueba">prueba</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

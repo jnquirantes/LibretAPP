@@ -25,9 +25,12 @@ public class T7_RecyclerRecetas extends RecyclerView.Adapter<T7_RecyclerRecetas.
         }
     }
 
+    private Context contexto;
     private ArrayList<String> titulos;
 
+
     public T7_RecyclerRecetas(Context contexto, ArrayList<String> titulos) {
+        this.contexto = contexto;
         this.titulos = titulos;
     }
 
