@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_libreria"
+            android:icon="@drawable/ic_orange_books"
+            android:title="@string/libreria" />
+        <item
+            android:id="@+id/nav_addLibro"
+            android:icon="@drawable/ic_orange_addlibro"
+            android:title="@string/add_libro" />
+        <item
+            android:id="@+id/nav_eliminarLibro"
+            android:icon="@drawable/ic_orange_deletelibro"
+            android:title="@string/eliminar_isbn" />
+        <item
+            android:id="@+id/nav_modificarLibro"
+            android:icon="@drawable/ic_orange_edit"
+            android:title="@string/modificar_isbn" />
+    </group>
+</menu>

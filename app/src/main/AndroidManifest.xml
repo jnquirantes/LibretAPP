@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Programacion_Multimedia"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Programacion_Multimedia.NoActionBar">
+            android:label="@string/asignatura">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -138,6 +138,15 @@
                 android:value="" />
         </activity>
         -->
+        <activity
+            android:name=".tema7.T7_Actividad2"
+            android:exported="false"
+            android:label="@string/title_activity_t7_actividad2"
+            android:theme="@style/Theme.Programacion_Multimedia.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".tema8.Tema8"
             android:exported="false"

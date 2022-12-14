@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#DFD8D8"
+    android:foregroundTint="#E8E6E6"
+    tools:context=".tema7.ui.eliminar.EliminarLibro">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="410dp"
+        android:layout_height="650dp"
+        android:layout_marginBottom="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLibros"
+        android:layout_width="410dp"
+        android:layout_height="650dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAgregar"
+        style="@style/ThemeOverlay.Material3.FloatingActionButton.Tertiary"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="36dp"
+        android:clickable="true"
+        android:contentDescription="@string/fab"
+        android:src="@android:drawable/ic_input_add"
+        android:theme="@style/Estilo5"
+        app:backgroundTint="#ECA326"
+        app:backgroundTintMode="add"
+        app:elevation="6dp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="40dp"
+        app:rippleColor="#F8F5F5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

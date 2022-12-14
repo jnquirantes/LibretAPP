@@ -162,14 +162,14 @@
                 <ImageView
                     android:id="@+id/bTrompeta"
                     android:layout_width="111dp"
-                    android:layout_height="88dp"
+                    android:layout_height="80dp"
                     android:contentDescription="@string/img"
                     android:src="@drawable/ic_trompeta" />
 
                 <ImageView
                     android:id="@+id/bTambor"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="80dp"
                     android:layout_marginStart="60dp"
                     android:contentDescription="@string/img"
                     android:src="@drawable/ic_tambor" />
@@ -198,14 +198,14 @@
                 <ImageView
                     android:id="@+id/bCabra"
                     android:layout_width="wrap_content"
-                    android:layout_height="87dp"
+                    android:layout_height="80dp"
                     android:contentDescription="@string/img"
                     android:src="@drawable/ic_cabra" />
 
                 <ImageView
                     android:id="@+id/bPajaro"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="80dp"
                     android:layout_marginStart="60dp"
                     android:contentDescription="@string/img"
                     android:src="@drawable/ic_pajaro" />
@@ -234,14 +234,14 @@
                 <ImageView
                     android:id="@+id/bSeta"
                     android:layout_width="wrap_content"
-                    android:layout_height="72dp"
+                    android:layout_height="80dp"
                     android:contentDescription="@string/img"
                     android:src="@drawable/ic_seta_vida" />
 
                 <ImageView
                     android:id="@+id/bCoin"
                     android:layout_width="116dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="80dp"
                     android:layout_marginStart="60dp"
                     android:contentDescription="@string/img"
                     android:src="@drawable/ic_coin_mario" />
