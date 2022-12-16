@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Programacion_Multimedia"
         tools:targetApi="31">
-
         <activity
             android:name=".MainActivity"
             android:exported="false"
@@ -67,21 +68,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <!--
- <activity
-            android:name=".tema6.T6_Caso1"
-            android:exported="false"
-            android:label="Tema 6: Caso 1: Navigation Drawer"
-            android:theme="@style/Theme.Programacion_Multimedia.NoActionBar" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        -->
         <activity
             android:name=".tema6.T6_Caso2"
             android:exported="false"
-            android:label="Tema 6: Caso 2 Animaciones">
+            android:label="Tema 6: Animaciones">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -89,7 +79,7 @@
         <activity
             android:name=".tema6.T6_Caso3"
             android:exported="false"
-            android:label="Tema 6: Caso 3 Settings">
+            android:label="Tema 6: Settings">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -97,7 +87,7 @@
         <activity
             android:name=".tema6.T6_Caso4"
             android:exported="false"
-            android:label="Tema 6: Caso 4 Toast">
+            android:label="Tema 6: Toast">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -105,7 +95,7 @@
         <activity
             android:name=".tema6.T6_Caso5"
             android:exported="false"
-            android:label="Tema 6: Caso 5 AboutPage">
+            android:label="Tema 6: AboutPage">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -127,20 +117,9 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <!--
- <activity
-            android:name=".tema7.T7_Actividad2"
-            android:exported="false"
-            android:label="Tema 7: Actividad 2"
-            android:theme="@style/Theme.Programacion_Multimedia.NoActionBar" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        -->
         <activity
             android:name=".tema7.T7_Actividad2"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_t7_actividad2"
             android:theme="@style/Theme.Programacion_Multimedia.NoActionBar">
             <meta-data

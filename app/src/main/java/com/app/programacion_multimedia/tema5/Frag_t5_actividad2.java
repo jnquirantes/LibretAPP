@@ -17,8 +17,7 @@ public class Frag_t5_actividad2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.t5_frag_actividad2, container, false);
 
-        return v;
+        return inflater.inflate(R.layout.t5_frag_actividad2, container, false);
     }
 }

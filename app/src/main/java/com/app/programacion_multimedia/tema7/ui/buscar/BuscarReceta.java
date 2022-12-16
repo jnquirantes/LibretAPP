@@ -1,17 +1,17 @@
 package com.app.programacion_multimedia.tema7.ui.buscar;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,8 +32,8 @@ public class BuscarReceta extends Fragment {
     private ArrayList<T7_Actividad1_Receta> recetas;
     private ArrayList<String> titulos;
     private ArrayList<ArrayList<String>> ingredientes;
-    private RecyclerView recycler;
-    private T7_RecyclerRecetas ra;
+    private RecyclerView recyclerRecetas;
+    private T7_RecyclerRecetas adaptadorRecetas;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class BuscarReceta extends Fragment {
 
         etBuscar = view.findViewById(R.id.etBuscar);
         Button bSearch = view.findViewById(R.id.bSearch);
-        recycler = view.findViewById(R.id.recyclerFish);
+        recyclerRecetas = view.findViewById(R.id.recyclerRecetas);
         etBuscar.setText("");
         bd = new BD_Controller(BuscarReceta.this.getContext());
         recetas = new ArrayList<>();
@@ -71,25 +71,72 @@ public class BuscarReceta extends Fragment {
                     for(int j=0; j<lista.size(); j++){
                         if(lista.get(j).contains(etBuscar.getText().toString())) {
                             titulos.add(recetas.get(i).getTitulo());
-                            Log.e("titulos", titulos.get(0));
                          }
                     }
                     lista.clear();
                 }
 
-                recycler.setHasFixedSize(false);
-                recycler.setLayoutManager(new LinearLayoutManager(BuscarReceta.this.getContext()));
+                recyclerRecetas.setHasFixedSize(false);
+                recyclerRecetas.setLayoutManager(new LinearLayoutManager(BuscarReceta.this.getContext()));
 
-                ra = new T7_RecyclerRecetas(BuscarReceta.this.getContext(), titulos);
-                recycler.setAdapter(ra);
-                ra.refrescar();
+
+                adaptadorRecetas = new T7_RecyclerRecetas(BuscarReceta.this.getContext(), titulos);
+                adaptadorRecetas.setOnclickListener(v1 -> {
+                    for(int i=0; i<recetas.size(); i++) {
+                            //String elegido = recetas.get(recyclerRecetas.getChildAdapterPosition(v1)).getTitulo();
+                            AlertDialog alertDialog;
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getContext().getApplicationContext());
+                            builder.setCancelable(true); //Al pulsar la pantalla, fuera del AlertDialog, se cierra
+
+                            LayoutInflater infl = getLayoutInflater();
+                            View vi = infl.inflate(R.layout.t7_item_dialog, null);
+
+                            Button aOK = v.findViewById(R.id.aOK);
+                            TextView aTitulo = v.findViewById(R.id.aTitulo);
+                            TextView aPreparacion = v.findViewById(R.id.aPreparacion);
+                            TableRow fila1 = v.findViewById(R.id.fila1);
+                            TableRow fila2 = v.findViewById(R.id.fila2);
+                            TableRow fila3 = v.findViewById(R.id.fila3);
+
+                            for(int j=0; i< ingredientes.size(); i++) {
+                                TextView ing = new TextView(getContext());
+
+                                if(j<3) {
+                                    ing.setText(ingredientes.get(i).toString());
+                                    fila1.addView(ing);
+
+                                } else if(j<6) {
+                                    ing.setText(ingredientes.get(i).toString());
+                                    fila2.addView(ing);
+
+                                } else {
+                                    ing.setText(ingredientes.get(i).toString());
+                                    fila3.addView(ing);
+                                }
+
+                            }
+                            builder.setView(v);
+                            alertDialog = builder.create();
+
+                            aOK.setOnClickListener(v2 -> {
+
+                            });
+
+                            alertDialog.show();
+                        }
+
+
+                });
+
+                recyclerRecetas.setAdapter(adaptadorRecetas);
+                adaptadorRecetas.refrescar();
 
 
                 etBuscar.setText("");
                 bd.close();
 
             } else {
-                Toast.makeText(BuscarReceta.this.getContext(), "Introduce un ingrediente", Toast.LENGTH_SHORT).show();
+                etBuscar.setError("Introduce un ingrdiente");
                 etBuscar.requestFocus();
                 return;
             }

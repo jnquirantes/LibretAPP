@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.programacion_multimedia.R;
+import com.app.programacion_multimedia.tema7.T7_Actividad2_Libro;
 
 import java.util.ArrayList;
 
@@ -18,28 +19,24 @@ public class T7_RecyclerLibros extends RecyclerView.Adapter<T7_RecyclerLibros.Ho
 
         public static class HolderList extends RecyclerView.ViewHolder {
 
-            TextView tNombre, tISBN;
+            TextView tTitulo, tDescripcion, tISBN;
             ImageView iLibro;
 
             public HolderList(@NonNull View itemView) {
                 super(itemView);
-                tNombre = itemView.findViewById(R.id.tNombre);
-                tISBN = itemView.findViewById(R.id.tISBN);
+                tTitulo = itemView.findViewById(R.id.tTitulo2);
+                tDescripcion = itemView.findViewById(R.id.tDescripcion);
+                tISBN = itemView.findViewById(R.id.tISBN2);
                 iLibro = itemView.findViewById(R.id.iLibro);
-
             }
         }
 
         private Context contexto;
-        private ArrayList<String> nombres, ISBNs;
-        private ArrayList<Integer> imagenes;
+        private ArrayList<T7_Actividad2_Libro> libros;
 
-        public T7_RecyclerLibros(Context contexto, ArrayList<String> nombres, ArrayList<String> ISBNs,
-                                 ArrayList<Integer> imagenes) {
+        public T7_RecyclerLibros(Context contexto, ArrayList<T7_Actividad2_Libro> libros) {
             this.contexto = contexto;
-            this.nombres = nombres;
-            this.ISBNs = ISBNs;
-            this.imagenes = imagenes;
+            this.libros = libros;
         }
 
         public void refrescar() {notifyDataSetChanged();}
@@ -47,20 +44,21 @@ public class T7_RecyclerLibros extends RecyclerView.Adapter<T7_RecyclerLibros.Ho
         @NonNull
         @Override
         public T7_RecyclerLibros.HolderList onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.t7_actividad2_item_recycler, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.t7_item_libro, parent, false);
             return new T7_RecyclerLibros.HolderList(v);
         }
 
         @Override
         public void onBindViewHolder(@NonNull T7_RecyclerLibros.HolderList holder, int position) {
-            holder.tNombre.setText(nombres.get(position));
-            holder.tISBN.setText(ISBNs.get(position));
-            holder.iLibro.setImageResource(imagenes.get(position));
+            holder.tTitulo.setText(libros.get(position).getNombre());
+            holder.tDescripcion.setText(libros.get(position).getDescripcion());
+            holder.tISBN.setText(libros.get(position).getISBN());
+            //holder.iLibro.setImageResource(imagenes.get(position));
         }
 
         @Override
         public int getItemCount() {
-            return nombres.size();
+            return libros.size();
         }
 
         @Override

@@ -8,22 +8,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import com.app.programacion_multimedia.MainActivity;
 import com.app.programacion_multimedia.R;
 import com.app.programacion_multimedia.adapter.ViewPageAdapter;
 import com.google.android.material.tabs.TabLayout;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class Tema4 extends AppCompatActivity {
 
@@ -90,26 +81,11 @@ public class Tema4 extends AppCompatActivity {
                     break;
 
                     case(R.id.mDescarga):
-                        String texto = "";
-                        try {
-                            BufferedReader br = new BufferedReader(new FileReader("tema4/T4_Actividad1.java"));
-                            br.read();
 
-                            while(br.read()!=-1){
-                                texto += (char)br.read();
-                            }
-                            br.close();
+                    break;
 
-                            BufferedWriter bw = new BufferedWriter(new FileWriter("/data/data/com.app.programacion_multimedia/Code_T4Actividad1.java"));
-                            bw.write(texto);
-                            bw.close();
-
-                            Toast.makeText(Tema4.this, "Fichero descargado", Toast.LENGTH_SHORT).show();
-
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
+                    case(R.id.mAbrir):
+                    break;
                 }
                 return false;
             });

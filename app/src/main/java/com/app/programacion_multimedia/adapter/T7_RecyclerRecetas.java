@@ -13,7 +13,8 @@ import com.app.programacion_multimedia.R;
 
 import java.util.ArrayList;
 
-public class T7_RecyclerRecetas extends RecyclerView.Adapter<T7_RecyclerRecetas.HolderList> {
+public class T7_RecyclerRecetas extends RecyclerView.Adapter<T7_RecyclerRecetas.HolderList>
+                                implements View.OnClickListener {
 
     public static class HolderList extends RecyclerView.ViewHolder {
 
@@ -27,6 +28,7 @@ public class T7_RecyclerRecetas extends RecyclerView.Adapter<T7_RecyclerRecetas.
 
     private Context contexto;
     private ArrayList<String> titulos;
+    private View.OnClickListener listener;
 
 
     public T7_RecyclerRecetas(Context contexto, ArrayList<String> titulos) {
@@ -40,17 +42,31 @@ public class T7_RecyclerRecetas extends RecyclerView.Adapter<T7_RecyclerRecetas.
     @Override
     public T7_RecyclerRecetas.HolderList onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.t7_actividad1_item_recycler, parent, false);
-        return new HolderList(v);
+        v.setOnClickListener(this);
+
+       return new HolderList(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull T7_RecyclerRecetas.HolderList holder, int position) {
        holder.tTitulo.setText(titulos.get(position));
+
+
     }
 
     @Override
-    public int getItemCount() {
-        return titulos.size();
+    public int getItemCount() {return titulos.size();
+    }
+
+    public void setOnclickListener(View.OnClickListener listener) {
+        this.listener = listener;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(listener != null) {
+            listener.onClick(v);
+        }
     }
 
     @Override

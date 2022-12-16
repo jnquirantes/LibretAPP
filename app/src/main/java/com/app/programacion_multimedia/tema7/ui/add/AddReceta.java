@@ -59,7 +59,7 @@ public class AddReceta extends Fragment {
 
         fabAdd.setOnClickListener(v -> {
             if(etTitulo.getText().toString().equals("")) {
-                Toast.makeText(AddReceta.this.getContext(), "Introduce un titulo", Toast.LENGTH_SHORT).show();
+                etTitulo.setError("Introduce un titulo");
                 etTitulo.requestFocus();
                 return;
             }

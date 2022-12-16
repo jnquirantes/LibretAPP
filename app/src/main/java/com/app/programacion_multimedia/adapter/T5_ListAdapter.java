@@ -27,10 +27,12 @@ public class T5_ListAdapter extends RecyclerView.Adapter<T5_ListAdapter.HolderLi
         }
     }
 
+    private Context contexto;
     private ArrayList<ElementoLista> elementos;
 
     public T5_ListAdapter(Context contexto, ArrayList<ElementoLista> elementos) {
         this.elementos = elementos;
+        this.contexto = contexto;
     }
 
     public void add(ArrayList<ElementoLista> datos){

@@ -18,23 +18,9 @@ public class T7_Actividad1_Receta {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getPreparacion() {
-        return preparacion;
-    }
-
-    public void setPreparacion(String preparacion) {
-        this.preparacion = preparacion;
-    }
+    public String getPreparacion() {return preparacion;}
 
     public ArrayList<String> getIngredientes() {
         return ingredientes;
-    }
-
-    public void setIngredientes(ArrayList<String> ingredientes) {
-        this.ingredientes = ingredientes;
     }
 }

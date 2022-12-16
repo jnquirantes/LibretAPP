@@ -1,7 +1,5 @@
 package com.app.programacion_multimedia.adapter;
 
-import android.widget.ImageButton;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -18,9 +16,8 @@ import com.app.programacion_multimedia.tema5.Frag_t5_caso;
 import com.app.programacion_multimedia.tema6.Frag_t6_actividad1;
 import com.app.programacion_multimedia.tema6.Frag_t6_actividad2;
 import com.app.programacion_multimedia.tema6.Frag_t6_casos;
-import com.app.programacion_multimedia.tema7.Frag_t7_casos;
+import com.app.programacion_multimedia.tema7.T7_Casos;
 import com.app.programacion_multimedia.tema8.Frag_t8_caso;
-import com.google.android.material.internal.ContextUtils;
 
 
 public class ViewPageAdapter extends FragmentStateAdapter {
@@ -70,7 +67,7 @@ public class ViewPageAdapter extends FragmentStateAdapter {
         } else if (tema7) {
             switch (position) {
                 case 0:
-                    return new Frag_t7_casos();
+                    return new T7_Casos();
                 case 1:
                     return new FragHecho();
                 case 2:

@@ -6,16 +6,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.app.programacion_multimedia.tema7.T7_Actividad1_Receta;
+import com.app.programacion_multimedia.tema7.T7_Actividad2_Libro;
 
 import java.util.ArrayList;
 
-
 public class BD_Controller extends SQLiteOpenHelper {
-
 
     //CREAR TABLAS
     private final String CREATE_RECETAS = "CREATE TABLE Recetas (titulo TEXT, preparacion TEXT, i1 TEXT, " +
@@ -112,7 +110,7 @@ public class BD_Controller extends SQLiteOpenHelper {
     //TEMA 7
        //Actividad 2
 
-    public void insertarLibro(EditText etNombre, EditText etDescripcion, EditText etISBN, ImageView imagen){
+    public void insertarLibro(EditText etNombre, EditText etDescripcion, EditText etISBN){
         bd = getWritableDatabase();
 
         if(bd != null) {
@@ -120,9 +118,68 @@ public class BD_Controller extends SQLiteOpenHelper {
             values.put("nombre", etNombre.getText().toString());
             values.put("descripcion", etDescripcion.getText().toString());
             values.put("ISBN", etISBN.getText().toString());
-            values.put("imagenID", imagen.getId());
 
-            bd.insert("AddLibros", "", values);
+            bd.insert("Libros", "", values);
+            Toast.makeText(contexto, "Libro añadido", Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
+    public void eliminarLibro(String isbn) {
+        bd = getWritableDatabase();
+        bd.delete("Libros", "isbn= ?", new String[]{isbn});
+        Toast.makeText(contexto, "Libro borrado", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void modificarLibro(String isbn, String titulo, String descripcion) {
+        bd = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("nombre", titulo);
+        values.put("descripcion", descripcion);
+
+        bd.update("Libros", values, "isbn=?", new String[]{isbn});
+        Toast.makeText(contexto, "Libro modificado", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public ArrayList<T7_Actividad2_Libro> consultar() {
+        ArrayList<T7_Actividad2_Libro> libros = new ArrayList<>();
+        bd = getReadableDatabase();
+        Cursor c = bd.query("Libros", null, null, null, null, null, null);
+        if (c.getCount() > 0) {
+            c.moveToFirst();
+            while(c.moveToNext()) {
+                String titulo = c.getString(c.getColumnIndexOrThrow("nombre"));
+                String descripcion = c.getString(c.getColumnIndexOrThrow("descripcion"));
+                String isbn = c.getString(c.getColumnIndexOrThrow("ISBN"));
+                //int img = c.getInt(c.getColumnIndexOrThrow("imagen"));
+
+                T7_Actividad2_Libro libro = new T7_Actividad2_Libro(titulo, descripcion, isbn, 0);
+                libros.add(libro);
+            }
+
+            c.close();
+        }
+        return libros;
+    }
+
+    public T7_Actividad2_Libro consultarLibro(String isbn) {
+        bd = getWritableDatabase();
+
+        Cursor c = bd.query("Libros", null, "isbn=?", new String[]{isbn}, null, null, null);
+        String titulo, descripcion;
+
+        if(c.getCount() > 0) {
+            c.moveToFirst();
+            titulo = c.getString(0);
+            descripcion = c.getString(1);
+            System.out.println(titulo + "-----------------------------------" + descripcion);
+            c.close();
+            return new T7_Actividad2_Libro(titulo, descripcion, isbn);
+
+        } else {
+            return null;
         }
     }
 

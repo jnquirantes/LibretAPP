@@ -25,7 +25,7 @@ import android.widget.Toast;
 import com.app.programacion_multimedia.R;
 
 
-public class Frag_t7_casos extends Fragment implements View.OnClickListener {
+public class T7_Casos extends Fragment implements View.OnClickListener {
 
     private Spinner spinnerMusica;
     private String cancion;
@@ -34,7 +34,9 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
     private Button bComenzar;
     private Button bPausar;
     private SoundPool sp;
+    SoundPool soundPool;
     private boolean loaded;
+    private int IDTrompeta, IDTambor, IDCabra, IDPajaro, IDVida, IDMoneda;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,7 +76,7 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
         flujodemusica = 0;
         loaded = false;
 
-        spinnerMusica.setAdapter(new ArrayAdapter<>(Frag_t7_casos.this.getContext(), R.layout.resource_item_spinner_main, valores));
+        spinnerMusica.setAdapter(new ArrayAdapter<>(T7_Casos.this.getContext(), R.layout.resource_item_spinner_main, valores));
         spinnerMusica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
@@ -87,6 +89,15 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
 
             }
         });
+
+        soundPool = new SoundPool( 1, AudioManager.STREAM_MUSIC , 0);
+        IDTrompeta = soundPool.load(T7_Casos.this.getContext(), R.raw.s_trompeta, 0);
+        IDTambor = soundPool.load(T7_Casos.this.getContext(), R.raw.s_tambor, 0);
+        IDCabra = soundPool.load(T7_Casos.this.getContext(), R.raw.s_cabra, 0);
+        IDPajaro = soundPool.load(T7_Casos.this.getContext(), R.raw.s_pajaro, 0);
+        IDVida = soundPool.load(T7_Casos.this.getContext(), R.raw.s_mario_vida, 0);
+        IDMoneda = soundPool.load(T7_Casos.this.getContext(), R.raw.s_mario_coin, 0);
+
 
         return v;
     }
@@ -126,35 +137,31 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
                         mp.start();
                         bComenzar.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
                         bPausar.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
-
                     }
-
             break;
 
             case (R.id.bTrompeta):
-                crearSonido(R.raw.s_trompeta);
-                if(flujodemusica != 0)
-                    sp.play(flujodemusica, 1, 1, 0, 0,1);
+                soundPool.play(IDTrompeta, 1, 1, 1, 0, 1);
             break;
 
             case (R.id.bTambor):
-
+                soundPool.play(IDTambor, 1, 1, 1, 0, 1);
             break;
 
             case (R.id.bCabra):
-
+                soundPool.play(IDCabra, 1, 1, 1, 0, 1);
             break;
 
             case (R.id.bPajaro):
-
+                soundPool.play(IDPajaro, 1, 1, 1, 0, 1);
             break;
 
             case (R.id.bSeta):
-
+                soundPool.play(IDVida, 1, 1, 1, 0, 1);
             break;
 
             case (R.id.bCoin):
-
+                soundPool.play(IDMoneda, 1, 1, 1, 0, 1);
             break;
         }
     }
@@ -179,28 +186,10 @@ public class Frag_t7_casos extends Fragment implements View.OnClickListener {
         }
 
         if(cancionID == 0){
-            Toast.makeText(Frag_t7_casos.this.getContext(), "Elija una canción", Toast.LENGTH_SHORT).show();
+            Toast.makeText(T7_Casos.this.getContext(), "Elija una canción", Toast.LENGTH_SHORT).show();
 
         } else {
-            mp = MediaPlayer.create(Frag_t7_casos.this.getContext(), cancionID);
+            mp = MediaPlayer.create(T7_Casos.this.getContext(), cancionID);
         }
-    }
-
-    public void crearSonido(int sonidoID) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-        {
-            AudioAttributes attributes = new AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_GAME)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .build();
-            sp = new SoundPool.Builder()
-                    .setAudioAttributes(attributes)
-                    .build();
-        } else {
-            sp = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
-        }
-
-        flujodemusica = sp.load(Frag_t7_casos.this.getContext(), sonidoID, 1);
-        sp.setOnLoadCompleteListener((soundPool, sampleId, status) -> loaded = true);
     }
 }

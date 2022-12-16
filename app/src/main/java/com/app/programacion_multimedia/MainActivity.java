@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         elegir = findViewById(R.id.Elegir);
         elegir.setVisibility(View.GONE);
-
         animation = findViewById(R.id.animation);
 
         spinnerMain = findViewById(R.id.spinner);

@@ -1,38 +1,61 @@
 <resources>
+    <!-- String app base -->
     <string name="app_name">Programacion_Multimedia</string>
     <string name="title_activity_tema3">Tema3</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="tema_4">Tema 4</string>
+    <string name="tema5">Tema5</string>
+    <string name="tema6">Tema6</string>
     <string name="title_activity_t6_caso1">Tema 6: NavigationDrawer</string>
-    <string name="navigation_drawer_open">Abrir navigation drawer</string>
-    <string name="navigation_drawer_close">Cerrar navigation drawer</string>
-    <string name="action_settings">Configuración</string>
+    <string name="title_activity_t7_activiidad1">Tema 7: Activiidad 1</string>
+    <string name="title_activity_t7_actividad2">Tema 7: Actividad2</string>
+    <string name="title_caso">Caso práctico</string>
+    <string name="actividad_1">Actividad 1</string>
+    <string name="actividad_2">Actividad 2</string>
+    <string name="open">Abrir código</string>
+    <string name="download">Descargar código</string>
+    <string name="github">Ver en GitHub</string>
+    <string name="descargar">Descargar .java</string>
+    <string name="actividades">Actividades</string>
+    <string name="elige_tema">Elige un tema:</string>
+    <string name="escriba_aqui">Escriba aqui</string>
+    <string name="elegir">Elegir</string>
+    <string name="empty">No hay nada por aquí…</string>
+    <string name="asignatura">Programación Multimedia</string>
+    <string name="temario">Temario</string>
+    <string name="boton_aceptar">Aceptar</string>
+    <string name="boton_cancelar">Cancelar</string>
+    <string name="boton_eliminar">Eliminar</string>
+    <string name="boton_modificar">Modificar</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-
-    <!-- Preference Titles -->
+    <!-- Preference-->
     <string name="messages_header">Mensajes</string>
     <string name="sync_header">Sincronización</string>
-
-    <!-- Messages Preferences -->
     <string name="signature_title">Tu firma</string>
     <string name="reply_title">Acción de respuesta predeterminada</string>
-
-    <!-- Sync Preferences -->
     <string name="sync_title">Sincroniza email periódicamente</string>
     <string name="attachment_title">Descargar archivos adjuntos</string>
     <string name="attachment_summary_on">Descargar automáticamente archivos adjuntos</string>
     <string name="attachment_summary_off">Solo descargar archivos adjuntos manualmente</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_t7_actividad1">T7: Actividad 1</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="titulo">Título:</string>
+    <string name="nombre">Nombre</string>
+
+    <!-- ContentDescription -->
+    <string name="fab">fab</string>
+    <string name="button">button</string>
+    <string name="spinner">Spinner</string>
+    <string name="img">img</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="toast">Toast</string>
+
+    <!-- navigationDrawer -->
+    <string name="navigation_drawer_open">Abrir navigation drawer</string>
+    <string name="navigation_drawer_close">Cerrar navigation drawer</string>
+    <string name="action_settings">Configuración</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="title_activity_t7_activiidad1">Tema 7: Activiidad 1</string>
-    <string name="title_activity_t7_actividad2">Tema 7: Actividad2</string>
+
+    <!--Strings tema 4 -->
     <string name="title_base_numero">Base del número</string>
     <string name="decimal">Decimal</string>
     <string name="n_mero">Número</string>
@@ -41,51 +64,33 @@
     <string name="hexadecimal">Hexadecimal</string>
     <string name="convertir">Convertir</string>
     <string name="resultado_de_la_conversi_n">Resultado de la conversión</string>
-    <string name="escriba_aqui">Escriba aqui</string>
-    <string name="fab">fab</string>
-    <string name="title_caso">Caso práctico</string>
-    <string name="actividad_1">Actividad 1</string>
-    <string name="actividad_2">Actividad 2</string>
-    <string name="button">button</string>
-    <string name="github">Ver en GitHub</string>
-    <string name="descargar">Descargar .java</string>
+    <string name="escriba_url">Escriba una URL</string>
+    <string name="abrir_navegador">ABRIR EN EL NAVEGADOR</string>
+    <string name="ver_tarea">Ver tarea</string>
+
+    <!-- Tema 6 -->
     <string name="custom_toas">Toast personalizado</string>
     <string name="up_toast">Toast arriba</string>
     <string name="left_toast">Toast izquierda</string>
     <string name="right_toast">Toast derecha</string>
     <string name="bottom_toast">Toast abajo</string>
-    <string name="actividades">Actividades</string>
-    <string name="elige_tema">Elige un tema:</string>
-    <string name="spinner">Spinner</string>
-    <string name="elegir">Elegir</string>
-    <string name="empty">No hay nada por aquí…</string>
-    <string name="img">img</string>
-    <string name="ver_tarea">Ver tarea</string>
-    <string name="escriba_url">Escriba una URL</string>
-    <string name="abrir_navegador">ABRIR EN EL NAVEGADOR</string>
-    <string name="recyclerview">RecyclerView</string>
-    <string name="asignatura">Programación Multimedia</string>
-    <string name="temario">Temario</string>
-    <string name="toast">Toast</string>
     <string name="defecto">Por defecto</string>
     <string name="gravity_aleatorio">Gravity aleatorio</string>
     <string name="custom">Personalizado</string>
     <string name="iniciar">Iniciar</string>
     <string name="pausar">Pausar</string>
-    <string name="boton_next">next</string>
-    <string name="escribe_aqui">Escribe aqui....</string>
-    <string name="boton_aceptar">Aceptar</string>
-    <string name="boton_cancelar">Cancelar</string>
     <string name="caso_1">Caso 1</string>
     <string name="caso_3">Caso 3</string>
     <string name="caso_2">Caso 2</string>
     <string name="caso_4">Caso 4</string>
     <string name="caso_5">Caso 5</string>
+
+    <!-- Tema 7 -->
     <string name="ingredientes">Ingredientes</string>
     <string name="preparaci_n">Preparación</string>
     <string name="modo_de_preparaci_n">Modo de preparación</string>
     <string name="t_tulo">Título</string>
-    <string name="agregar">agregar</string>
+    <string name="agregar">Agregar</string>
     <string name="escribe_un_ingrediente">Escribe un ingrediente…</string>
     <string name="tema7">Tema7</string>
     <string name="agregue_imagen">Agregue una imagen</string>
@@ -98,22 +103,16 @@
     <string name="instrumentos">Instrumentos</string>
     <string name="animales">Animales</string>
     <string name="juegos">Juegos</string>
-    <string name="nombre">Nombre</string>
-    <string name="tipo">Tipo</string>
-    <string name="size">Tamaño</string>
-    <string name="precio">Precio</string>
-    <string name="tema_4">Tema 4</string>
-    <string name="tema5">Tema5</string>
-    <string name="tema6">Tema6</string>
     <string name="add_receta">Añadir receta</string>
     <string name="buscar_receta">Buscar receta</string>
     <string name="libreria">Libreria</string>
     <string name="add_libro">Añadir libro</string>
     <string name="eliminar_isbn">Eliminar libro(por ISBN)</string>
     <string name="modificar_isbn">Modificar libro(por ISBN)</string>
-    <string name="open">Abrir código</string>
-    <string name="download">Descargar código</string>
-    <string name="title_activity_t11">T1_1</string>
-    <string name="title_activity_prueba">prueba</string>
-    <string name="title_activity_main">MainActivity</string>
+
+    <!--Tema 8 -->
+    <string name="tipo">Tipo</string>
+    <string name="size">Tamaño</string>
+    <string name="precio">Precio</string>
+
 </resources>

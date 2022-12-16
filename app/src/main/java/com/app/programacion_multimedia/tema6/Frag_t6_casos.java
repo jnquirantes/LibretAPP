@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.app.programacion_multimedia.R;
+import com.app.programacion_multimedia.tema7.T7_Actividad1;
 
 public class Frag_t6_casos extends Fragment implements View.OnClickListener {
 
@@ -39,9 +40,9 @@ public class Frag_t6_casos extends Fragment implements View.OnClickListener {
 
         switch (v.getId()){
 
-            /*case R.id.bCaso1_T6:
-                startActivity(new Intent(Frag_t6_casos.this.getContext(), T6_Caso1.class));
-            break;*/
+            case R.id.bCaso1_T6:
+                startActivity(new Intent(Frag_t6_casos.this.getContext(), T7_Actividad1.class));
+            break;
 
             case R.id.bCaso2_T6:
                 startActivity(new Intent(Frag_t6_casos.this.getContext(), T6_Caso2.class));

@@ -19,10 +19,6 @@ public class Frag_t4_actividad2 extends Fragment {
     private EditText etURL;
     private String ruta;
 
-    public Frag_t4_actividad2() {
-        // Required empty public constructor
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

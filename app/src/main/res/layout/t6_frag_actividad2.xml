@@ -10,7 +10,7 @@
         android:id="@+id/profileImage"
         android:layout_width="304dp"
         android:layout_height="246dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="5dp"
         android:src="@drawable/img_otono"
         app:civ_border_color="#FF000000"
@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNext"
@@ -28,7 +28,7 @@
         android:layout_marginEnd="20dp"
         android:layout_weight="1"
         android:clickable="true"
-        android:contentDescription="@string/boton_next"
+        android:contentDescription="@string/fab"
         android:src="@drawable/ic_next"
         app:backgroundTint="#FFFFFF"
         app:elevation="16dp"
@@ -108,9 +108,10 @@
         android:layout_width="369dp"
         android:layout_height="90dp"
         android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="50"
         android:gravity="bottom"
-        android:hint="@string/escribe_aqui"
+        android:hint="@string/escriba_aqui"
         android:inputType="textMultiLine"
         android:selectAllOnFocus="true"
         android:textStyle="italic"
@@ -118,8 +119,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/bAceptar"
@@ -155,14 +155,5 @@
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bAceptar" />
-
-    <Space
-        android:id="@+id/space"
-        android:layout_width="414dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/profileImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

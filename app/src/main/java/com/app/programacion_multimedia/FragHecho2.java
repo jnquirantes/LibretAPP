@@ -17,7 +17,6 @@ public class FragHecho2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.frag_hecho, container, false);
 
         view.findViewById(R.id.bTarea).setOnClickListener(v -> {

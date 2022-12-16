@@ -5,32 +5,24 @@
     android:id="@+id/frameLayout8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="30dp"
     tools:context=".tema7.ui.add.AddLibros"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="83dp">
-
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="258dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
-        android:gravity="center_vertical"
-        android:text="@string/agregue_imagen"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+    tools:layout_editor_absoluteX="-64dp"
+    tools:layout_editor_absoluteY="42dp">
 
     <TextView
         android:id="@+id/textView36"
-        android:layout_width="74dp"
-        android:layout_height="40dp"
+        android:layout_width="87dp"
+        android:layout_height="42dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="116dp"
-        android:gravity="center_vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="72dp"
         android:text="@string/isbn"
-        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/etISBN"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
@@ -38,7 +30,7 @@
         android:id="@+id/etNombre"
         android:layout_width="228dp"
         android:layout_height="49dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="52dp"
         android:autofillHints=""
         android:ems="10"
@@ -50,31 +42,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etNombre3"
+        android:id="@+id/etISBN"
         android:layout_width="224dp"
         android:layout_height="48dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="13dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/escriba_aqui"
         android:inputType="textPersonName"
         android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView33"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcion" />
 
     <EditText
         android:id="@+id/etDescripcion"
-        android:layout_width="221dp"
-        android:layout_height="123dp"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="34dp"
         android:autofillHints=""
         android:ems="10"
         android:gravity="top"
         android:hint="@string/escriba_aqui"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView35"
         app:layout_constraintTop_toBottomOf="@+id/etNombre" />
 
@@ -84,21 +81,23 @@
         android:layout_height="41dp"
         android:layout_marginStart="23dp"
         android:layout_marginTop="54dp"
-        android:gravity="center_vertical"
         android:text="@string/t_tulo"
-        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView35"
-        android:layout_width="120dp"
+        android:layout_width="146dp"
         android:layout_height="42dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="44dp"
-        android:gravity="center_vertical"
         android:text="@string/descripcion"
-        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
@@ -106,13 +105,51 @@
         android:id="@+id/imageView2"
         android:layout_width="205dp"
         android:layout_height="190dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="103dp"
         android:contentDescription="@string/img"
         android:foregroundTint="#AE2424"
         android:src="@drawable/ic_menu_camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView37"
         app:tint="#E19E37" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="199dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="16dp"
+        android:foregroundGravity="center"
+        android:gravity="center_vertical"
+        android:text="@string/agregue_imagen"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etISBN" />
+
+    <Button
+        android:id="@+id/bAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="149dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/agregar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,9 +10,8 @@
 
     <RelativeLayout
         android:id="@+id/container"
-        android:layout_width="410dp"
-        android:layout_height="650dp"
-        android:layout_marginBottom="88dp"
+        android:layout_width="411dp"
+        android:layout_height="740dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -21,10 +20,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerLibros"
         android:layout_width="410dp"
-        android:layout_height="650dp"
+        android:layout_height="600dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAgregar"

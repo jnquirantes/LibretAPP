@@ -16,10 +16,6 @@ public class Pescado {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getSize() {
         return size;
     }
@@ -30,10 +26,6 @@ public class Pescado {
 
     public String getTipo() {
         return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
     }
 
     public int getPrecio() {

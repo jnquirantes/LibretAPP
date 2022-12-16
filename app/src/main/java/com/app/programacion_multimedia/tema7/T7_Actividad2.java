@@ -31,8 +31,7 @@ public class T7_Actividad2 extends AppCompatActivity {
 
         DrawerLayout drawer = binding2.drawerLayout2;
         NavigationView navigationView = binding2.desplegable2;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_libreria, R.id.nav_addLibro, R.id.nav_eliminarLibro, R.id.nav_modificarLibro)
                 .setOpenableLayout(drawer)
@@ -40,7 +39,10 @@ public class T7_Actividad2 extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_t7_actividad2);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

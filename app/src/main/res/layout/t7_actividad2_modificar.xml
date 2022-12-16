@@ -7,17 +7,160 @@
     android:layout_height="match_parent"
     tools:context=".tema7.ui.modificar.ModificarLibro" >
 
-    <TextView
-        android:id="@+id/text_slideshow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="639dp"
+        android:layout_marginTop="60dp"
+        android:gravity="clip_horizontal|clip_vertical"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/isbn"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etISBN2"
+                android:layout_width="198dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/escriba_aqui"
+                android:inputType="textPersonName"
+                android:textStyle="italic" />
+
+            <ImageButton
+                android:id="@+id/bBuscar2"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/holo_orange_light"
+                android:contentDescription="@string/button"
+                android:src="@android:drawable/ic_menu_search"
+                app:tint="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pModificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="76dp"
+                    android:layout_height="48dp"
+                    android:text="@string/t_tulo"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etNombre2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/escriba_aqui"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="143dp"
+                    android:layout_height="42dp"
+                    android:text="@string/descripcion"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etDescripcion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="118dp"
+                    android:layout_marginStart="10dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/escriba_aqui"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textStyle="italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bModificar"
+                        android:layout_width="149dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:foregroundTint="#FFFFFF"
+                        android:text="@string/boton_modificar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/bCancelar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="10dp"
+                        android:foregroundTint="#FFFFFF"
+                        android:text="@string/boton_cancelar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="298dp"
+            android:layout_height="201dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="180dp"
+            android:src="@drawable/img_libro"
+            app:srcCompat="@drawable/img_libro"
+            android:contentDescription="@string/img" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
