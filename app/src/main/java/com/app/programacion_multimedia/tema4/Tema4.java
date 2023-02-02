@@ -51,7 +51,6 @@ public class Tema4 extends AppCompatActivity {
             }
         });
 
-        //ERROR al entrar desde StartScreenActivity, no cambia la barra inferior
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
@@ -67,33 +66,24 @@ public class Tema4 extends AppCompatActivity {
             inflater.inflate(R.menu.descargar, popup.getMenu());
             popup.setOnMenuItemClickListener(item -> {
                 switch (item.getItemId()) {
-                    case(R.id.mGit):
+                    case (R.id.mGit):
                         if (tabLayout.getTabAt(1).isSelected()) {
                             Uri webpage = Uri.parse("https://github.com/jnquirantes/Programacion_Multimedia/commit/7c3ebaa3bd67bee4e3902f4361728b1a7a2b1d67?diff=unified#diff-7b4adf3c1c3698ef45a30b259b95b01ef77d3064ae7d5fd7cc55161906fcccab");
                             Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                             startActivity(webIntent);
 
-                        } else if(tabLayout.getTabAt(1).isSelected()) {
+                        } else if (tabLayout.getTabAt(2).isSelected()) {
                             Uri webpage = Uri.parse("https://github.com/jnquirantes/Programacion_Multimedia/commit/7c3ebaa3bd67bee4e3902f4361728b1a7a2b1d67?diff=unified#diff-27849c997d5314acbe46c4d68ab3196d55a4cba6bae098edb1559861f551324f");
                             Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                             startActivity(webIntent);
                         }
-                    break;
-
-                    case(R.id.mDescarga):
-
-                    break;
-
-                    case(R.id.mAbrir):
-                    break;
+                        break;
                 }
                 return false;
             });
             popup.show();
         });
     }
-
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
