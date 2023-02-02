@@ -2,6 +2,7 @@
 
 <!-- T3_Actividad2 Tema4-->
 <resources>
+
     <style name="Estilo1" parent="Theme.AppCompat">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">30sp</item>
@@ -35,7 +36,6 @@
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">@android:color/holo_orange_light</item>
-        <item name="android:windowLightStatusBar">true</item>
 
     </style>
 
@@ -43,7 +43,15 @@
         <item name="android:background">@android:color/background_dark</item>
     </style>
 
-    <style name="Theme.ButtonChanger"
-        parent="Theme.AppCompat.Light.NoActionBar"/>
+    <style name="Theme.ButtonChanger" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Widget.Theme.Programacion_Multimedia.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.Programacion_Multimedia.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
 
 </resources>

@@ -4,55 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    android:layout_marginBottom="60dp"
     tools:context=".tema7.ui.buscar.BuscarReceta">
 
-    <EditText
-        android:id="@+id/etBuscar"
-        android:layout_width="266dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="@string/escribe_un_ingrediente"
-        android:inputType="textPersonName"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView32"
-        android:autofillHints="" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/escriba_aqui"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/bSearch"
-        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
-        android:layout_width="80dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="48dp"
-        android:contentDescription="@string/button"
-        app:icon="?android:attr/actionModeWebSearchDrawable"
-        app:iconGravity="start"
-        app:iconPadding="0dp"
-        app:iconSize="40dp"
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="609dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerRecetas"
-        android:layout_width="365dp"
-        android:layout_height="207dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bSearch" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="392dp"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etBuscar"
+                android:layout_width="266dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/escribe_un_ingrediente"
+                android:inputType="textPersonName"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/bSearch"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:contentDescription="@string/button"
+                app:icon="?android:attr/actionModeWebSearchDrawable"
+                app:iconGravity="start"
+                app:iconPadding="0dp"
+                app:iconSize="40dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRecetas"
+            android:layout_width="369dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="382dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

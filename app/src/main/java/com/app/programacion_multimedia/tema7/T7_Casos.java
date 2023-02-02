@@ -29,14 +29,10 @@ public class T7_Casos extends Fragment implements View.OnClickListener {
 
     private Spinner spinnerMusica;
     private String cancion;
-    private int cancionID, flujodemusica;
     private MediaPlayer mp;
-    private Button bComenzar;
-    private Button bPausar;
-    private SoundPool sp;
-    SoundPool soundPool;
-    private boolean loaded;
-    private int IDTrompeta, IDTambor, IDCabra, IDPajaro, IDVida, IDMoneda;
+    private Button bComenzar, bPausar;
+    private SoundPool soundPool;
+    private int IDTrompeta, IDTambor, IDCabra, IDPajaro, IDVida, IDMoneda, cancionID;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,21 +69,16 @@ public class T7_Casos extends Fragment implements View.OnClickListener {
         String[] valores = {"Seleccione", "Bach","Mozart","Beethoven"};
         mp = null;
         cancionID = 0;
-        flujodemusica = 0;
-        loaded = false;
 
         spinnerMusica.setAdapter(new ArrayAdapter<>(T7_Casos.this.getContext(), R.layout.resource_item_spinner_main, valores));
         spinnerMusica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 cancion = spinnerMusica.getSelectedItem().toString();
-
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) { }
         });
 
         soundPool = new SoundPool( 1, AudioManager.STREAM_MUSIC , 0);

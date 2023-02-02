@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="20dp"
+    android:foregroundTint="#F3ECEC"
+    tools:context=".tema8.vista.T8_Actividad1">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="406dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/t30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/base_datos"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/iBD"
+            android:layout_width="129dp"
+            android:layout_height="135dp"
+            android:backgroundTint="#ED6565"
+            android:contentDescription="@string/img"
+            android:elevation="15dp"
+            android:textAlignment="gravity"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/ic_database"
+            app:iconTint="#FFFFFF"
+            app:strokeColor="#0B0A0A"
+            app:strokeWidth="3dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="347dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etID"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/introduzca_un_id"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/bBuscarID"
+                android:layout_width="139dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:focusableInTouchMode="true"
+                android:text="@string/buscar"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:cornerRadius="50dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="415dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recicyclerID"
+            android:layout_width="387dp"
+            android:layout_height="271dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nombre"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etUser"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/introduce_un_nombre"
+                android:inputType="textPersonName"
+                android:autofillHints="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pass"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/introduzca_una_contrase_a"
+                android:inputType="textPersonName"
+                android:autofillHints="" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bCrear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:foregroundTint="#FFFFFF"
+            android:text="@string/crear"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:cornerRadius="50dp"
+            app:iconTint="#F8F5F5" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

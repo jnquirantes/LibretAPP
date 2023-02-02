@@ -26,12 +26,9 @@ public class Frag_t8_caso extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.t8_frag_caso, container, false);
-
         RecyclerView recycler = v.findViewById(R.id.recyclerFish);
 
-
         try {
-
             ArrayList<Pescado> pescados = new ArrayList<>();
             String CONTENIDO = "[{\"fish_name\":\"Indian Mackerel\",\"cat_name\":\"Marine  Fish\",\"size_name\":\"Medium\",\"price\":\"100\"},\n" +
                     "{\"fish_name\":\"Manthal Repti\",\"cat_name\":\"Marine Fish\",\"size_name\":\"Small\",\"price\":\"200\"},\n" +

@@ -1,5 +1,11 @@
 package com.app.programacion_multimedia;
 
+import static com.app.programacion_multimedia.MainActivity.tema4;
+import static com.app.programacion_multimedia.MainActivity.tema5;
+import static com.app.programacion_multimedia.MainActivity.tema7;
+import static com.app.programacion_multimedia.MainActivity.tema8;
+import static com.app.programacion_multimedia.MainActivity.tema9;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,12 +17,9 @@ import android.view.ViewGroup;
 
 import com.app.programacion_multimedia.tema4.T4_Actividad1;
 import com.app.programacion_multimedia.tema7.T7_Actividad1;
+import com.app.programacion_multimedia.tema8.vista.T8_Actividad1;
 
 public class FragHecho extends Fragment {
-
-    private boolean tema4 = MainActivity.tema4;
-    private boolean tema5 = MainActivity.tema5;
-    private boolean tema7 = MainActivity.tema7;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,8 +31,12 @@ public class FragHecho extends Fragment {
                 startActivity(new Intent(FragHecho.this.getContext(), T4_Actividad1.class));
 
             } else if (tema7) {
-                startActivity(new Intent(FragHecho.this.getContext(), T7_Actividad1.class));
+                Intent i = new Intent(FragHecho.this.getContext(), T7_Actividad1.class);
+                i.putExtra("tema7", true);
+                startActivity(i);
 
+            } else if (tema8 || tema9) {
+                startActivity(new Intent(FragHecho.this.getContext(), T8_Actividad1.class));
             }
         });
 

@@ -23,7 +23,6 @@ public class T7_Actividad1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = T7Actividad1Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -31,8 +30,7 @@ public class T7_Actividad1 extends AppCompatActivity {
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.desplegable;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.item_menu_add, R.id.item_menu_search)
                 .setOpenableLayout(drawer)
@@ -55,4 +53,6 @@ public class T7_Actividad1 extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }

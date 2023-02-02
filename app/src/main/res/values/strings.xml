@@ -8,8 +8,9 @@
     <string name="tema5">Tema5</string>
     <string name="tema6">Tema6</string>
     <string name="title_activity_t6_caso1">Tema 6: NavigationDrawer</string>
-    <string name="title_activity_t7_activiidad1">Tema 7: Activiidad 1</string>
+    <string name="title_activity_t7_activiidad1">Tema 7: Actividad 1</string>
     <string name="title_activity_t7_actividad2">Tema 7: Actividad2</string>
+    <string name="title_activity_t8_activiidad1">Tema 8: Actividad 1</string>
     <string name="title_caso">Caso práctico</string>
     <string name="actividad_1">Actividad 1</string>
     <string name="actividad_2">Actividad 2</string>
@@ -114,5 +115,22 @@
     <string name="tipo">Tipo</string>
     <string name="size">Tamaño</string>
     <string name="precio">Precio</string>
+    <string name="base_datos">Base de Datos</string>
+    <string name="conectar">CONECTAR</string>
+    <string name="introduzca_un_id">Introduzca un ID</string>
+    <string name="buscar">Buscar</string>
+    <string name="id">ID:</string>
+    <string name="pass">Contraseña</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tema10_juego">Tema10_juego</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="pulsa_chuck">Pulsa en Chuck Norris para conseguir chistes…</string>
+    <string name="introduce_un_nombre">Introduce un nombre</string>
+    <string name="introduzca_una_contrase_a">Introduzca una contraseña</string>
+    <string name="crear">CREAR</string>
+    <string name="categor_a">Categoría</string>
+    <string name="categorias">PLATO, BEBIDA o POSTRE</string>
+    <string name="inserte_ingredientes">Inserte ingredientes</string>
 
 </resources>

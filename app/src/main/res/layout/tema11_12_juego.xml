@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen"
+    tools:context=".tema11_12.Tema11_12_juego">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <com.app.programacion_multimedia.tema11_12.vista.Pantalla
+        android:id="@+id/pantalla"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp" />
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <LinearLayout
+        android:id="@+id/pAccion"
+        android:layout_width="84dp"
+        android:layout_height="192dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bMano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_hand"
+            app:iconGravity="textTop"
+            app:iconSize="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bArriba"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:pointerIcon="none"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconGravity="textTop"
+            app:iconSize="50dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bIzq"
+                android:layout_width="72dp"
+                android:layout_height="58dp"
+                app:icon="@drawable/ic_arrow_left"
+                app:iconGravity="textTop"
+                app:iconSize="50dp" />
+
+            <Button
+                android:id="@+id/bDerch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:icon="@drawable/ic_arrow_right"
+                app:iconGravity="textTop"
+                app:iconSize="50dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="143dp"
+            android:layout_height="48dp"
+            android:pointerIcon="none"
+            app:icon="@drawable/ic_arrow_down"
+            app:iconGravity="textTop"
+            app:iconSize="50dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="722dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

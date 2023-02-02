@@ -48,11 +48,10 @@ public class T6_Caso5 extends AppCompatActivity {
 
     Element getCopyRightsElement() {
         Element copyRightsElement = new Element();
-        final String copyrights = String.format(("Copyrights"), Calendar.getInstance().get(Calendar.YEAR));
+        final String copyrights = String.format("Copyrights", Calendar.getInstance().get(Calendar.YEAR));
         copyRightsElement.setTitle(copyrights);
         copyRightsElement.setIconDrawable(R.drawable.ic_menu_camera);
         copyRightsElement.setAutoApplyIconTint(true);
-        copyRightsElement.setIconTint(mehdi.sakout.aboutpage.R.color.about_item_icon_color);
         copyRightsElement.setIconNightTint(android.R.color.white);
         copyRightsElement.setGravity(Gravity.CENTER);
         copyRightsElement.setOnClickListener(v -> Toast.makeText(T6_Caso5.this, copyrights, Toast.LENGTH_SHORT).show());

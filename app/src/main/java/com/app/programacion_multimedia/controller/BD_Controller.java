@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.app.programacion_multimedia.tema7.T7_Actividad1_Receta;
+import com.app.programacion_multimedia.tema7.Receta;
 import com.app.programacion_multimedia.tema7.T7_Actividad2_Libro;
 
 import java.util.ArrayList;
@@ -68,9 +68,9 @@ public class BD_Controller extends SQLiteOpenHelper {
 
     }
 
-    public ArrayList<T7_Actividad1_Receta> consultarRecetas(){
+    public ArrayList<Receta> consultarRecetas(){
 
-        ArrayList<T7_Actividad1_Receta> recetas = new ArrayList<>();
+        ArrayList<Receta> recetas = new ArrayList<>();
         bd = getReadableDatabase();
         String sortOrder = "titulo ASC";
 
@@ -96,7 +96,7 @@ public class BD_Controller extends SQLiteOpenHelper {
                     ingredientes.add(c.getString(i));
                 }
 
-                recetas.add(new T7_Actividad1_Receta(titulo, preparacion, ingredientes));
+                recetas.add(new Receta(titulo, preparacion, ingredientes, null));
 
             } while (c.moveToNext());
             c.close();

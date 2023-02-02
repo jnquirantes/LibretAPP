@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="70dp"
     android:layout_gravity="clip_horizontal|clip_vertical"
@@ -9,7 +8,7 @@
     android:clickable="true">
 
     <LinearLayout
-        android:layout_width="336dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_margin="5dp"
         android:layout_marginStart="30dp"
@@ -34,12 +33,12 @@
                 android:layout_height="46dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_ingrediente"
-                android:contentDescription="@string/img" />
+                android:contentDescription="@string/img"
+                app:srcCompat="@drawable/ic_ingrediente" />
 
             <TextView
                 android:id="@+id/tTitulo"
-                android:layout_width="177dp"
+                android:layout_width="324dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
@@ -48,7 +47,7 @@
                 android:gravity="center_vertical"
                 android:padding="10dp"
                 android:paddingHorizontal="10dp"
-                android:text="Titulo"
+                android:text="@string/t_tulo"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
