@@ -75,7 +75,7 @@ public class Tema10 extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case (R.id.mGit):
                         if (tabLayout.getTabAt(0).isSelected()) {
-                            Uri webpage = Uri.parse("https://acortar.link/Wo4AemP");
+                            Uri webpage = Uri.parse("https://acortar.link/Wo4Aem");
                             Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                             startActivity(webIntent);
 
