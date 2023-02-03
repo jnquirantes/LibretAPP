@@ -22,7 +22,6 @@ public class Frag_t4_actividad2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.t4_frag_actividad2, container, false);
 
         etURL = view.findViewById(R.id.etURL);

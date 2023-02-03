@@ -1,5 +1,7 @@
 package com.app.programacion_multimedia.tema8;
 
+import static com.app.programacion_multimedia.MainActivity.tema8;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,12 +16,14 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.app.programacion_multimedia.MainActivity;
 import com.app.programacion_multimedia.R;
 import com.app.programacion_multimedia.adapter.ViewPageAdapter;
+import com.app.programacion_multimedia.tema7.Tema7;
 import com.google.android.material.tabs.TabLayout;
 
 public class Tema8 extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager2 viewPager2;
+    private ImageButton bDownload;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,22 +60,31 @@ public class Tema8 extends AppCompatActivity {
             }
         });
 
-        ImageButton bDownload = findViewById(R.id.fabDownload);
+        bDownload = findViewById(R.id.fabDownload);
         bDownload.setOnClickListener(v -> {
 
             PopupMenu popup = new PopupMenu(Tema8.this, v);
             MenuInflater inflater = popup.getMenuInflater();
             inflater.inflate(R.menu.descargar, popup.getMenu());
-
             popup.setOnMenuItemClickListener(item -> {
                 switch (item.getItemId()) {
-                    case(R.id.mGit):
+                    case (R.id.mGit):
                         if (tabLayout.getTabAt(0).isSelected()) {
-                            Uri webpage = Uri.parse("https://github.com/jnquirantes/Programacion_Multimedia_2DAM/blob/main/app/src/main/java/com/app/programacion_multimedia/tema8/Frag_t8_caso.java");
+                            Uri webpage = Uri.parse("https://acortar.link/DXlCr5");
+                            Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                            startActivity(webIntent);
+
+                        } else if (tabLayout.getTabAt(1).isSelected()) {
+                            Uri webpage = Uri.parse("https://acortar.link/EhyVVc");
+                            Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                            startActivity(webIntent);
+
+                        } else {
+                            Uri webpage = Uri.parse("https://acortar.link/Uuq4m3");
                             Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                             startActivity(webIntent);
                         }
-                    break;
+                        break;
                 }
                 return false;
             });
@@ -80,8 +93,14 @@ public class Tema8 extends AppCompatActivity {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        MainActivity.tema8 = false;
-        return super.onKeyDown(keyCode, event);
+    public void onBackPressed() {
+        int selectedItemId = tabLayout.getSelectedTabPosition();
+        if (selectedItemId != 0) {
+            tabLayout.selectTab(tabLayout.getTabAt(selectedItemId-1));
+
+        } else {
+            startActivity(new Intent(this, MainActivity.class));
+            tema8 = false;
+        }
     }
 }

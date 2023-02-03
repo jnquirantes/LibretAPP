@@ -1,5 +1,7 @@
 package com.app.programacion_multimedia.tema10;
 
+import static com.app.programacion_multimedia.tema10.Frag_t10_Actividad1.enviado;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,14 +22,37 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+
 public class Frag_t10_casos extends Fragment {
 
-    private FloatingActionButton fabMark;
+    private static ArrayList<LatLng> listaMarcadores = new ArrayList<>();
+    private static ArrayList<String> listaTitulos = new ArrayList<>();
+
+
     private OnMapReadyCallback callback = googleMap -> {
         LatLng granada = new LatLng(37.17820568878431, -3.5945339662230125);
-        googleMap.addMarker(new MarkerOptions().position(granada).title("Granada"));
+        //googleMap.addMarker(new MarkerOptions().position(granada).title("Granada"));
+
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(granada));
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(granada, 12.5f));
+
+        if(enviado == true) {
+            String marcador = getActivity().getIntent().getExtras().getString("marcador");
+            String latitudS = getActivity().getIntent().getExtras().getString("latitud");
+            Double latitud = Double.parseDouble(latitudS);
+            String longitudS = getActivity().getIntent().getExtras().getString("longitud");
+            Double longitud = Double.parseDouble(longitudS);
+
+            LatLng coordenadas = new LatLng(latitud, longitud);
+            listaMarcadores.add(coordenadas);
+            listaTitulos.add(marcador);
+            enviado = false;
+        }
+
+        for (int i=0; i<listaTitulos.size(); i++) {
+            googleMap.addMarker(new MarkerOptions().position(listaMarcadores.get(i)).title(listaTitulos.get(i)));
+        }
     };
 
     @Nullable
@@ -46,5 +71,9 @@ public class Frag_t10_casos extends Fragment {
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
+
+
+
+
     }
 }

@@ -42,7 +42,6 @@ public class T7_Actividad1 extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.t7_actividad1_setting, menu);
         return true;
     }

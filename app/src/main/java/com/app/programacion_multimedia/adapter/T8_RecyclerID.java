@@ -56,9 +56,6 @@ public class T8_RecyclerID extends RecyclerView.Adapter<T8_RecyclerID.HolderList
         holder.ivUser.setImageResource(R.drawable.ic_users);
     }
 
-    public void clear() {
-        users.clear();
-    }
     @Override
     public int getItemCount() {
         return users.size();

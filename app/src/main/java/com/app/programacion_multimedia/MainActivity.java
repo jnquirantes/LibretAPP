@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         animation = findViewById(R.id.animation);
 
         spinnerMain = findViewById(R.id.spinner);
-        String[] valores = {"Seleccione", "Tema 4","Tema 5","Tema 6","Tema 7", "Tema 8", "Tema 9", "Tema 10", "Tema 11-12"};
+        String[] valores = {"Seleccione", "Tema 4","Tema 5","Tema 6","Tema 7", "Tema 8", "Tema 9", "Tema 10"};
         spinnerMain.setAdapter(new ArrayAdapter<>(this, R.layout.resource_item_spinner_main, valores));
         spinnerMain.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
               @Override
@@ -108,8 +108,6 @@ public class MainActivity extends AppCompatActivity {
                    tema11_12 = true;
                    startActivity(intent11_12);
                break;
-
-
          }
        });
     }

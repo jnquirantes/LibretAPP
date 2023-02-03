@@ -132,5 +132,6 @@
     <string name="categor_a">Categoría</string>
     <string name="categorias">PLATO, BEBIDA o POSTRE</string>
     <string name="inserte_ingredientes">Inserte ingredientes</string>
+    <string name="a_adir_marcador">Añadir Marcador</string>
 
 </resources>

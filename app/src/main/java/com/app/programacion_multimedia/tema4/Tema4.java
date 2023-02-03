@@ -1,5 +1,7 @@
 package com.app.programacion_multimedia.tema4;
 
+import static com.app.programacion_multimedia.MainActivity.tema4;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -10,6 +12,7 @@ import android.view.KeyEvent;
 import android.view.MenuInflater;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import com.app.programacion_multimedia.MainActivity;
 import com.app.programacion_multimedia.R;
@@ -68,16 +71,19 @@ public class Tema4 extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case (R.id.mGit):
                         if (tabLayout.getTabAt(1).isSelected()) {
-                            Uri webpage = Uri.parse("https://github.com/jnquirantes/Programacion_Multimedia/commit/7c3ebaa3bd67bee4e3902f4361728b1a7a2b1d67?diff=unified#diff-7b4adf3c1c3698ef45a30b259b95b01ef77d3064ae7d5fd7cc55161906fcccab");
+                            Uri webpage = Uri.parse("https://acortar.link/dRl6TI");
                             Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                             startActivity(webIntent);
 
                         } else if (tabLayout.getTabAt(2).isSelected()) {
-                            Uri webpage = Uri.parse("https://github.com/jnquirantes/Programacion_Multimedia/commit/7c3ebaa3bd67bee4e3902f4361728b1a7a2b1d67?diff=unified#diff-27849c997d5314acbe46c4d68ab3196d55a4cba6bae098edb1559861f551324f");
+                            Uri webpage = Uri.parse("https://acortar.link/K6dqwR");
                             Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                             startActivity(webIntent);
+
+                        } else {
+                            Toast.makeText(this, "No hay ninguna actividad en esta área", Toast.LENGTH_SHORT).show();
                         }
-                        break;
+                    break;
                 }
                 return false;
             });
@@ -86,8 +92,14 @@ public class Tema4 extends AppCompatActivity {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        MainActivity.tema4 = false;
-        return super.onKeyDown(keyCode, event);
+    public void onBackPressed() {
+        int selectedItemId = tabLayout.getSelectedTabPosition();
+        if (selectedItemId != 0) {
+            tabLayout.selectTab(tabLayout.getTabAt(selectedItemId-1));
+
+        } else {
+            startActivity(new Intent(this, MainActivity.class));
+            tema4 = false;
+        }
     }
 }

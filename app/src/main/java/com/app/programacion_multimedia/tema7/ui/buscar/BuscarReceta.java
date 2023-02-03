@@ -61,8 +61,6 @@ public class BuscarReceta extends Fragment {
             etBuscar.setHint("Escriba una categoría");
             tema7 = false;
 
-        } else {
-            tema8 = false;
         }
 
         bSearch.setOnClickListener(v -> {

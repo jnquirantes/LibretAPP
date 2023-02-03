@@ -1,7 +1,14 @@
 package com.app.programacion_multimedia.tema7;
 
+import static com.app.programacion_multimedia.MainActivity.tema7;
+
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.MenuInflater;
+import android.widget.ImageButton;
+import android.widget.PopupMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -9,12 +16,14 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.app.programacion_multimedia.MainActivity;
 import com.app.programacion_multimedia.R;
 import com.app.programacion_multimedia.adapter.ViewPageAdapter;
+import com.app.programacion_multimedia.tema6.Tema6;
 import com.google.android.material.tabs.TabLayout;
 
 public class Tema7 extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager2 viewPager2;
+    private ImageButton bDownload;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +60,48 @@ public class Tema7 extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
+        bDownload = findViewById(R.id.fabDownload);
+        bDownload.setOnClickListener(v -> {
+
+            PopupMenu popup = new PopupMenu(Tema7.this, v);
+            MenuInflater inflater = popup.getMenuInflater();
+            inflater.inflate(R.menu.descargar, popup.getMenu());
+            popup.setOnMenuItemClickListener(item -> {
+                switch (item.getItemId()) {
+                    case (R.id.mGit):
+                        if (tabLayout.getTabAt(0).isSelected()) {
+                            Uri webpage = Uri.parse("https://acortar.link/hRGIFP");
+                            Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                            startActivity(webIntent);
+
+                        } else if (tabLayout.getTabAt(1).isSelected()) {
+                            Uri webpage = Uri.parse("https://acortar.link/Uuq4m3");
+                            Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                            startActivity(webIntent);
+
+                        } else {
+                            Uri webpage = Uri.parse("https://acortar.link/iwKDzY");
+                            Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                            startActivity(webIntent);
+                        }
+                        break;
+                }
+                return false;
+            });
+            popup.show();
+        });
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        MainActivity.tema7 = false;
-        return super.onKeyDown(keyCode, event);
+    public void onBackPressed() {
+        int selectedItemId = tabLayout.getSelectedTabPosition();
+        if (selectedItemId != 0) {
+            tabLayout.selectTab(tabLayout.getTabAt(selectedItemId-1));
+
+        } else {
+            startActivity(new Intent(this, MainActivity.class));
+            tema7 = false;
+        }
     }
 }
