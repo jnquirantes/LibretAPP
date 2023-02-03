@@ -80,7 +80,7 @@ public class Tema10 extends AppCompatActivity {
                             startActivity(webIntent);
 
                         } else if (tabLayout.getTabAt(1).isSelected()) {
-                            Uri webpage = Uri.parse("https://acortar.link/Uuq4m3");
+                            Uri webpage = Uri.parse("https://acortar.link/jHlGQR");
                             Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
                             startActivity(webIntent);
 
